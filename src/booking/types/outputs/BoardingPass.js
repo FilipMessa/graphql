@@ -3,7 +3,12 @@
 import { GraphQLObjectType, GraphQLString, GraphQLList } from 'graphql';
 import { GraphQLDate } from 'graphql-iso-date';
 import Leg from '../../../flight/types/outputs/Leg';
+import BoardingPassStatus, {
+  boardingPassStatusResolver,
+} from '../enums/BoardingPassStatus';
 import GraphQLPkpass from './Pkpass';
+
+import type { BoardingPass } from '../../Booking';
 
 export default new GraphQLObjectType({
   name: 'BoardingPass',
@@ -26,7 +31,14 @@ export default new GraphQLObjectType({
       type: GraphQLDate,
       description:
         'The date when the boarding pass will be available for download',
-      reslove: ({ availableAt }) => availableAt,
+      resolve: ({ availableAt }) => availableAt,
+    },
+    availabilityStatus: {
+      type: BoardingPassStatus,
+      description: 'Boarding pass availability status',
+      resolve: ({ availableAt, boardingPassUrl }: BoardingPass): string => {
+        return boardingPassStatusResolver(availableAt, boardingPassUrl);
+      },
     },
     pkpasses: {
       type: new GraphQLList(GraphQLPkpass),

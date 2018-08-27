@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Boarding pass should have valid fields 1`] = `
+Object {
+  "availabilityStatus": Object {
+    "args": Array [],
+    "description": "Boarding pass availability status",
+    "isDeprecated": false,
+    "name": "availabilityStatus",
+    "resolve": [Function],
+    "type": "availabilityStatus",
+  },
+  "availableAt": Object {
+    "args": Array [],
+    "description": "The date when the boarding pass will be available for download",
+    "isDeprecated": false,
+    "name": "availableAt",
+    "resolve": [Function],
+    "type": "Date",
+  },
+  "boardingPassUrl": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "boardingPassUrl",
+    "resolve": [Function],
+    "type": "String",
+  },
+  "flightNumber": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "flightNumber",
+    "resolve": [Function],
+    "type": "String",
+  },
+  "leg": Object {
+    "args": Array [],
+    "description": "The leg for the boarding pass",
+    "isDeprecated": false,
+    "name": "leg",
+    "resolve": [Function],
+    "type": "Leg",
+  },
+  "pkpasses": Object {
+    "args": Array [],
+    "description": "pkpasses connected to the boarding pass",
+    "isDeprecated": false,
+    "name": "pkpasses",
+    "resolve": [Function],
+    "type": "[Pkpass]",
+  },
+}
+`;
