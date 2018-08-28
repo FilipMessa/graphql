@@ -221,6 +221,13 @@ Object {
     "resolve": [Function],
     "type": "BookingType",
   },
+  "unstable_baggage": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "unstable_baggage",
+    "resolve": [Function],
+    "type": "[BookingBaggage]",
+  },
   "upcomingLeg": Object {
     "args": Array [],
     "description": "Nearest upcoming leg by arrival time.",

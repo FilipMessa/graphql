@@ -8,6 +8,7 @@ import parseAcceptLanguage from './context/ParseAcceptLanguage';
 
 import IdentityDataloader from '../../identity/dataloaders/Identity';
 import createBookingLoader from '../../booking/dataloaders/Booking';
+import createBaggageDataLoader from '../../booking/dataloaders/Baggage';
 import createCurrencyLoader from '../../currency/dataloaders/Currency';
 import createAirlineLoader from '../../flight/dataloaders/Airline';
 import createRatesLoader from '../dataloaders/Rates';
@@ -44,6 +45,7 @@ import type {
   Args as FAQCArticleArgs,
   FAQArticleDetail,
 } from '../../FAQ/dataloaders/FAQArticle';
+import type { BookingBaggageData } from '../../booking/types/outputs/BookingBaggage';
 import type { CustomerSupportNumber } from '../../customerSupport/types/CustomerSupportNumber';
 
 /**
@@ -92,6 +94,7 @@ export type GraphqlContextType = {|
     FAQCategories: FAQCategoriesLoader,
     FAQArticle: DataLoader<FAQCArticleArgs, FAQArticleDetail>,
     dynamicPackages: DynamicPackagesLoader,
+    baggage: DataLoader<number, $ReadOnlyArray<BookingBaggageData>>,
     customerSupportNumber: DataLoader<string, ?CustomerSupportNumber>,
   |},
   options: OptionsStorage,
@@ -166,6 +169,7 @@ export function createContext({
       FAQCategories: new FAQCategoriesLoader(locale.language, FAQ_CATEGORY_ID),
       FAQArticle: createFAQArticleLoader(locale.language),
       dynamicPackages: new DynamicPackagesLoader(location),
+      baggage: createBaggageDataLoader(token),
       customerSupportNumber: createCustomerSupportNumberLoader(),
     },
     options: new OptionsStorage(),

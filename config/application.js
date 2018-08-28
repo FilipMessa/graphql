@@ -4,6 +4,7 @@ import url from 'url';
 
 export default {
   restApiEndpoint: {
+    // DEPRECATED - setting the urls for REST API here is discouraged
     allBookings:
       'https://booking-api.skypicker.com/api/v0.1/users/self/bookings',
     singleBooking: (bookingId: number, simpleToken: string) =>

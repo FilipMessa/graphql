@@ -33,6 +33,7 @@ import {
 } from '../../services/AllBookingsFilters';
 import Services from './services/Services';
 import WhitelabeledServices from './services/WhitelabeledServices';
+import BookingBaggage, { type BookingBaggageData } from './BookingBaggage';
 import Leg from '../../../flight/types/outputs/Leg';
 import type { Leg as LegType } from '../../../flight/Flight';
 
@@ -85,6 +86,17 @@ export const commonFields = {
         authToken,
       });
       return allowedBaggage;
+    },
+  },
+
+  unstable_baggage: {
+    type: new GraphQLList(BookingBaggage),
+    resolve: async (
+      { id }: BookingInterfaceData,
+      params: Object,
+      { dataLoader }: GraphqlContextType,
+    ): Promise<$ReadOnlyArray<BookingBaggageData>> => {
+      return dataLoader.baggage.load(id);
     },
   },
 

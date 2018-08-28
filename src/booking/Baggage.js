@@ -13,10 +13,13 @@ export type AllowedBaggage = {|
   checked: Array<Baggage>,
 |};
 
-export type Baggage = {|
+export type BaggageCategory = 'hold_bag' | 'personal_item' | 'cabin_bag';
+
+export type Baggage = {
   height: ?number,
   length: ?number,
   width: ?number,
   weight: ?number,
   note: ?string,
-|};
+  category?: BaggageCategory,
+};
