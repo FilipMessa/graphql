@@ -1,6 +1,7 @@
 // @flow
 
 import { GraphQLObjectType, GraphQLString } from 'graphql';
+import Passenger from './Passenger';
 
 export default new GraphQLObjectType({
   name: 'BookingContactDetails',
@@ -11,6 +12,10 @@ export default new GraphQLObjectType({
     },
     email: {
       type: GraphQLString,
+    },
+    passenger: {
+      type: Passenger,
+      description: 'Documentation and information about the passanger.',
     },
   },
 });

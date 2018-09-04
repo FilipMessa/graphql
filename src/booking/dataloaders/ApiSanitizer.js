@@ -165,7 +165,7 @@ export function sanitizeDetail(apiData: Object): Booking {
     bookedServices: sanitizeAdditionalBookings(
       apiData.additional_bookings.details,
     ),
-    contactDetails: sanitizeContactDetails(apiData.contact),
+    contactDetails: sanitizeContactDetails(apiData.contact, apiData.passengers),
     allowedToChangeFlights,
     onlineCheckinIsAvailable,
     insurancePrices: parseInsurancePrices(
@@ -212,10 +212,17 @@ function sanitizeBoardingPasses(
   });
 }
 
-function sanitizeContactDetails(contactDetails: Object) {
+function sanitizeContactDetails(
+  contactDetails: Object,
+  passengers: ?$ReadOnlyArray<Object>,
+) {
   return {
     phone: contactDetails.phone,
     email: contactDetails.email,
+    passenger:
+      contactDetails.pid && passengers
+        ? passengers.find(({ id }) => id === contactDetails.pid)
+        : null,
   };
 }
 
