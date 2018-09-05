@@ -74,6 +74,7 @@ export type BookedService = {|
 export type ContactDetails = {|
   phone: string,
   email: string,
+  passenger: ?Passenger,
 |};
 
 /**

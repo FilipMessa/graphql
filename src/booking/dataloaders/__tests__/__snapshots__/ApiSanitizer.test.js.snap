@@ -350,6 +350,27 @@ The max. stay is granted within 180 days.
   ],
   "contactDetails": Object {
     "email": "tony@kiwi.com",
+    "passenger": Object {
+      "bags": 0,
+      "birthday": "1985-01-01",
+      "category": "adults",
+      "contact_passenger": true,
+      "firstname": "TEST",
+      "hand_bags": Object {},
+      "id": 4492972,
+      "insurance_price": null,
+      "insurance_type": "none",
+      "lastname": "TEST",
+      "nationality": "us",
+      "pkpass": Object {
+        "SP1123103_1678074": "https://pk.pass.lol",
+      },
+      "title": "mr",
+      "travel_document": Object {
+        "cardno": "12345678XY",
+        "expiration": 1608768000,
+      },
+    },
     "phone": "+1 000",
   },
   "created": 2017-05-03T18:41:59.000Z,

@@ -12,3 +12,20 @@ Object {
   },
 }
 `;
+
+exports[`should return passenger information 1`] = `
+Object {
+  "data": Object {
+    "booking": Object {
+      "contactDetails": Object {
+        "passenger": Object {
+          "firstname": "TEST",
+          "lastname": "TEST",
+          "nationality": "gb",
+          "title": "mr",
+        },
+      },
+    },
+  },
+}
+`;

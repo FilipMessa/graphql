@@ -28,3 +28,19 @@ it('should return contact details', async () => {
     }`;
   expect(await graphql(query)).toMatchSnapshot();
 });
+
+it('should return passenger information', async () => {
+  const query = `{
+      booking(id: 2707229) {
+        contactDetails {
+          passenger {
+            title
+            firstname
+            lastname
+            nationality
+          }
+        }
+      }
+    }`;
+  expect(await graphql(query)).toMatchSnapshot();
+});

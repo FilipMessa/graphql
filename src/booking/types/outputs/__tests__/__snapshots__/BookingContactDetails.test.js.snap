@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BookingContactDetails type should have valid fields 1`] = `
+Object {
+  "email": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "email",
+    "type": "String",
+  },
+  "passenger": Object {
+    "args": Array [],
+    "description": "Documentation and information about the passanger.",
+    "isDeprecated": false,
+    "name": "passenger",
+    "type": "Passenger",
+  },
+  "phone": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "phone",
+    "type": "String",
+  },
+}
+`;

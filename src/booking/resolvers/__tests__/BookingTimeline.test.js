@@ -621,6 +621,33 @@ const booking: Booking = {
   contactDetails: {
     phone: '+1 000',
     email: 'kiwicomtester@gmail.com',
+    passenger: {
+      firstname: 'TEST',
+      lastname: 'TEST',
+      pkpasses: null,
+      title: 'mr',
+      birthday: '1985-01-01',
+      nationality: 'us',
+      id: 4095416,
+      insuranceType: 'skysilver',
+      travelDocument: {
+        idNumber: '12345678XY',
+        expiration: 1608768000,
+      },
+      travelInfo: [
+        {
+          visa: [
+            {
+              info:
+                '<div class="content"><p>\n</p><p>Visa required.</p>\n\n<h3>Additional information:</h3>\n<p>\n</p><p>\nVisitors are required to hold documents required for their next destination. \n</p>\n<p>\nVisitors are strongly recommended to hold a health/travel insurance to cover for any medical expenses. \n</p>\n\n</div>',
+              status: 'critical',
+              country: 'US',
+              timestamp: 1448065843,
+            },
+          ],
+        },
+      ],
+    },
   },
   allowedToChangeFlights: 48,
   onlineCheckinIsAvailable: true,
