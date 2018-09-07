@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`voteFAQArticle mutation should not vote when payload is invalid 1`] = `
+Object {
+  "errors": Array [
+    [GraphQLError: Variable "$vote" got invalid value "invalidString"; Expected type VoteType.],
+  ],
+}
+`;
+
+exports[`voteFAQArticle mutation should vote article down 1`] = `
+Object {
+  "data": Object {
+    "voteFAQArticle": Object {
+      "id": "RkFRQXJ0aWNsZTo0MQ==",
+    },
+  },
+}
+`;
+
+exports[`voteFAQArticle mutation should vote article up 1`] = `
+Object {
+  "data": Object {
+    "voteFAQArticle": Object {
+      "id": "RkFRQXJ0aWNsZTo0MQ==",
+    },
+  },
+}
+`;
