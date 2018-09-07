@@ -1,7 +1,7 @@
 // @flow
 
 import generateCheckinClosingEvent from '../../bookingTimeline/checkinClosing';
-import { booking } from '../BookingTimeline.test';
+import { booking } from '../../TestData';
 
 describe('generateCheckinClosingEvent', () => {
   it('should generate CheckinClosing event if online checkin is available', () => {

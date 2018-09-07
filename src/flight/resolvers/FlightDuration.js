@@ -14,7 +14,7 @@ export default function getFlightDurationInMinutes(
   return getDurationInMinutes(departureTime, arrivalTime);
 }
 
-function getDurationInMinutes(departure: ?Date, arrival: ?Date) {
+export function getDurationInMinutes(departure: ?Date, arrival: ?Date) {
   if (!departure || !arrival || departure > arrival) {
     return null;
   }

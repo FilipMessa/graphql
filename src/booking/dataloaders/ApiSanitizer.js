@@ -62,6 +62,7 @@ export function sanitizeListItem(apiData: Object): BookingsItem {
       vehicle: flight.vehicle,
       operatingAirline: flight.operating_airline,
       pnr: flight.reservation_number,
+      stopoverDuration: null,
     }),
   );
   const lastLeg = legs[legs.length - 1];

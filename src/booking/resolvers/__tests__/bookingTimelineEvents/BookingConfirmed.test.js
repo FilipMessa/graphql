@@ -2,7 +2,7 @@
 
 import generateBookingConfirmedEvent from '../../bookingTimeline/bookingConfirmed';
 
-import { booking } from '../BookingTimeline.test';
+import { booking } from '../../TestData';
 
 describe('generateBookingConfirmedEvent', () => {
   it('returns BookingConfirmed event only when booking status is confirmed', () => {

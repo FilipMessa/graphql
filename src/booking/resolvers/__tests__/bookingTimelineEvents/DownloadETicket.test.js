@@ -1,7 +1,7 @@
 // @flow
 
 import generateDownloadETicketEvent from '../../bookingTimeline/downloadETicket';
-import { booking } from '../BookingTimeline.test';
+import { booking } from '../../TestData';
 
 describe('generateDownloadETicketEvent', () => {
   it('returns DownloadETicket event', () => {

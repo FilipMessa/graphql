@@ -92,6 +92,14 @@ Object {
     "resolve": [Function],
     "type": "Boolean",
   },
+  "stopoverDuration": Object {
+    "args": Array [],
+    "description": "Leg stopover duration before this leg in minutes.",
+    "isDeprecated": false,
+    "name": "stopoverDuration",
+    "resolve": [Function],
+    "type": "Int",
+  },
   "type": Object {
     "args": Array [],
     "isDeprecated": false,

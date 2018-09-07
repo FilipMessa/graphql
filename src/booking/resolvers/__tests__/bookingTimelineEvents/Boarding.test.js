@@ -1,7 +1,7 @@
 // @flow
 
 import generateBoardingEvent from '../../bookingTimeline/boarding';
-import { leg } from '../BookingTimeline.test';
+import { leg } from '../../TestData';
 
 describe('generateBoardingEvent', () => {
   it('returns Boarding event', () => {

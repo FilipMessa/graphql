@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`generateDownloadBoardingPassEvent returns DownloadBoardingPass event 1`] = `
+Object {
+  "leg": Object {
+    "airlineCode": "VY",
+    "arrival": Object {
+      "authToken": "token-lol",
+      "bid": 2707251,
+      "when": Object {
+        "local": 2017-09-09T23:30:00.000Z,
+        "utc": 2017-09-09T21:30:00.000Z,
+      },
+      "where": Object {
+        "cityId": "paris_fr",
+        "cityName": "Paris",
+        "code": "CDG",
+        "terminal": "2",
+      },
+    },
+    "boardingPassAvailableAt": "2017-09-02",
+    "bookingId": 2707251,
+    "departure": Object {
+      "authToken": "token-lol",
+      "bid": 2707251,
+      "when": Object {
+        "local": 2017-09-09T21:10:00.000Z,
+        "utc": 2017-09-09T20:10:00.000Z,
+      },
+      "where": Object {
+        "cityId": "london_gb",
+        "cityName": "London",
+        "code": "LGW",
+        "terminal": "E",
+      },
+    },
+    "flightNo": 8773,
+    "guarantee": false,
+    "id": "315289498",
+    "isReturn": false,
+    "operatingAirline": Object {
+      "iata": "VY",
+      "name": "Vueling",
+    },
+    "pnr": "chat",
+    "recheckRequired": false,
+    "stopoverDuration": null,
+    "vehicle": Object {
+      "manufacturer": "Airbus",
+      "model": "A320",
+    },
+    "vehicleType": "AIRCRAFT",
+  },
+  "timestamp": 2017-09-09T20:35:00.000Z,
+  "type": "DownloadBoardingPassTimelineEvent",
+}
+`;

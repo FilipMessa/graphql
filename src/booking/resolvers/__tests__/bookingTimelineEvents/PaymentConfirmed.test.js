@@ -1,7 +1,7 @@
 // @flow
 
 import generatePaymentConfirmedEvent from '../../bookingTimeline/paymentConfirmed';
-import { booking } from '../BookingTimeline.test';
+import { booking } from '../../TestData';
 
 describe('generatePaymentConfirmedEvent', () => {
   it('returns PaymentConfirmed event only when booking status is defined and not null', () => {

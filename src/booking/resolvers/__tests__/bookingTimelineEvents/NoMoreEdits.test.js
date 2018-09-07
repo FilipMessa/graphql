@@ -1,7 +1,7 @@
 // @flow
 
 import generateNoMoreEditsEvent from '../../bookingTimeline/noMoreEdits';
-import { booking } from '../BookingTimeline.test';
+import { booking } from '../../TestData';
 
 describe('generateNoMoreEditsEvent', () => {
   it('should return NoMoreEditsEvent if apiData.config.allowedToChange.flights is a number', () => {

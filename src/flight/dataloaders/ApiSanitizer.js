@@ -51,6 +51,7 @@ export function sanitizeApiResponse(
         vehicle: flight.vehicle,
         operatingAirline: flight.operating_airline,
         pnr: flight.reservation_number,
+        stopoverDuration: null,
       }),
     ),
     price: {

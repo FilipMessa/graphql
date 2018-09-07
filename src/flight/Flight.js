@@ -54,6 +54,7 @@ export type Leg = {|
   operatingAirline: OperatingAirline,
   pnr: string,
   authToken?: string,
+  stopoverDuration: number | null,
 |};
 
 export type Airline = {|

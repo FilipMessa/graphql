@@ -97,6 +97,7 @@ Object {
           },
           "pnr": "test",
           "recheckRequired": false,
+          "stopoverDuration": null,
           "vehicle": Object {
             "manufacturer": null,
             "meal": null,
@@ -216,6 +217,7 @@ The max. stay is granted within 180 days.
           },
           "pnr": "test",
           "recheckRequired": false,
+          "stopoverDuration": null,
           "vehicle": Object {
             "manufacturer": null,
             "meal": null,
@@ -275,6 +277,7 @@ The max. stay is granted within 180 days.
         },
         "pnr": "test",
         "recheckRequired": false,
+        "stopoverDuration": null,
         "vehicle": Object {
           "manufacturer": null,
           "meal": null,
@@ -329,6 +332,7 @@ The max. stay is granted within 180 days.
         },
         "pnr": "test",
         "recheckRequired": false,
+        "stopoverDuration": null,
         "vehicle": Object {
           "manufacturer": null,
           "meal": null,
@@ -456,6 +460,7 @@ The max. stay is granted within 180 days.
       },
       "pnr": "test",
       "recheckRequired": false,
+      "stopoverDuration": null,
       "vehicle": Object {
         "manufacturer": null,
         "meal": null,
@@ -510,6 +515,7 @@ The max. stay is granted within 180 days.
       },
       "pnr": "test",
       "recheckRequired": false,
+      "stopoverDuration": null,
       "vehicle": Object {
         "manufacturer": null,
         "meal": null,
@@ -658,6 +664,7 @@ Object {
       "operatingAirline": undefined,
       "pnr": "test",
       "recheckRequired": false,
+      "stopoverDuration": null,
       "vehicle": undefined,
       "vehicleType": undefined,
     },
@@ -703,6 +710,7 @@ Object {
       "operatingAirline": undefined,
       "pnr": "test",
       "recheckRequired": false,
+      "stopoverDuration": null,
       "vehicle": undefined,
       "vehicleType": undefined,
     },
@@ -844,6 +852,7 @@ Object {
         "operatingAirline": undefined,
         "pnr": "Q1VI1L",
         "recheckRequired": false,
+        "stopoverDuration": null,
         "vehicle": Object {
           "manufacturer": "Airbus",
           "meal": null,
@@ -895,6 +904,7 @@ Object {
         "operatingAirline": undefined,
         "pnr": "Q1VI1L",
         "recheckRequired": false,
+        "stopoverDuration": null,
         "vehicle": Object {
           "manufacturer": "Airbus",
           "meal": null,
@@ -949,6 +959,7 @@ Object {
       "operatingAirline": undefined,
       "pnr": "Q1VI1L",
       "recheckRequired": false,
+      "stopoverDuration": null,
       "vehicle": Object {
         "manufacturer": "Airbus",
         "meal": null,
@@ -1000,6 +1011,7 @@ Object {
       "operatingAirline": undefined,
       "pnr": "Q1VI1L",
       "recheckRequired": false,
+      "stopoverDuration": null,
       "vehicle": Object {
         "manufacturer": "Airbus",
         "meal": null,
@@ -1051,6 +1063,7 @@ Object {
       "operatingAirline": undefined,
       "pnr": "Q1VI1L",
       "recheckRequired": false,
+      "stopoverDuration": null,
       "vehicle": Object {
         "manufacturer": "Airbus",
         "meal": null,
@@ -1102,6 +1115,7 @@ Object {
       "operatingAirline": undefined,
       "pnr": "Q1VI1L",
       "recheckRequired": false,
+      "stopoverDuration": null,
       "vehicle": Object {
         "manufacturer": "Airbus",
         "meal": null,
@@ -1187,6 +1201,7 @@ Object {
         "operatingAirline": undefined,
         "pnr": "Q1VI1L",
         "recheckRequired": false,
+        "stopoverDuration": null,
         "vehicle": Object {
           "manufacturer": "Airbus",
           "meal": null,
@@ -1238,6 +1253,7 @@ Object {
         "operatingAirline": undefined,
         "pnr": "Q1VI1L",
         "recheckRequired": false,
+        "stopoverDuration": null,
         "vehicle": Object {
           "manufacturer": "Airbus",
           "meal": null,

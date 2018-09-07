@@ -1,7 +1,7 @@
 // @flow
 
 import generateNavigateToTerminalEvent from '../../bookingTimeline/navigateToTerminal';
-import { leg } from '../BookingTimeline.test';
+import { leg } from '../../TestData';
 
 describe('generateNavigateToTerminal', () => {
   it('should return null if departure.local is null', () => {

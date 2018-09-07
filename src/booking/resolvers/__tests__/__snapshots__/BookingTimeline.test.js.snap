@@ -1,0 +1,229 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`resolver matches the snapshot 1`] = `
+Array [
+  Object {
+    "arrival": Object {
+      "authToken": "token-lol",
+      "bid": 2707251,
+      "when": Object {
+        "local": 2017-09-09T23:30:00.000Z,
+        "utc": 2017-09-09T21:30:00.000Z,
+      },
+      "where": Object {
+        "cityId": "paris_fr",
+        "cityName": "Paris",
+        "code": "CDG",
+        "terminal": "2",
+      },
+    },
+    "timestamp": 2017-03-30T07:28:55.000Z,
+    "type": "BookedFlightTimelineEvent",
+  },
+  Object {
+    "timestamp": 2017-03-30T07:28:55.000Z,
+    "type": "BookingConfirmedTimelineEvent",
+  },
+  Object {
+    "timestamp": 2017-03-30T07:28:55.000Z,
+    "type": "PaymentConfirmedTimelineEvent",
+  },
+  Object {
+    "invoiceUrl": null,
+    "legs": Array [
+      Object {
+        "airlineCode": "VY",
+        "arrival": Object {
+          "authToken": "token-lol",
+          "bid": 2707251,
+          "when": Object {
+            "local": 2017-09-09T23:30:00.000Z,
+            "utc": 2017-09-09T21:30:00.000Z,
+          },
+          "where": Object {
+            "cityId": "paris_fr",
+            "cityName": "Paris",
+            "code": "CDG",
+            "terminal": "2",
+          },
+        },
+        "boardingPassAvailableAt": "2017-09-02",
+        "bookingId": 2707251,
+        "departure": Object {
+          "authToken": "token-lol",
+          "bid": 2707251,
+          "when": Object {
+            "local": 2017-09-09T21:10:00.000Z,
+            "utc": 2017-09-09T20:10:00.000Z,
+          },
+          "where": Object {
+            "cityId": "london_gb",
+            "cityName": "London",
+            "code": "LGW",
+            "terminal": "E",
+          },
+        },
+        "flightNo": 8773,
+        "guarantee": false,
+        "id": "315289498",
+        "isReturn": false,
+        "operatingAirline": Object {
+          "iata": "VY",
+          "name": "Vueling",
+        },
+        "pnr": "chat",
+        "recheckRequired": false,
+        "stopoverDuration": null,
+        "vehicle": Object {
+          "manufacturer": "Airbus",
+          "model": "A320",
+        },
+        "vehicleType": "AIRCRAFT",
+      },
+    ],
+    "numberPassengers": 2,
+    "timestamp": 2017-03-30T07:28:55.000Z,
+    "type": "DownloadInvoiceTimelineEvent",
+  },
+  Object {
+    "ticketUrl": "https://skypicker-mailing.s3.amazonaws.com/2707/1490859068_E-ticket_passenger_and_1_more_e826fc3275a65a5db8808279d8fc7f8f.pdf?v=1490859069",
+    "timestamp": 2017-03-30T07:28:55.000Z,
+    "type": "DownloadETicketTimelineEvent",
+  },
+  Object {
+    "timestamp": 2017-09-06T20:10:00.000Z,
+    "type": "TimeToCheckinTimelineEvent",
+  },
+  Object {
+    "timestamp": 2017-09-06T21:10:00.000Z,
+    "type": "CheckinClosingTimelineEvent",
+  },
+  Object {
+    "timestamp": 2017-09-07T21:10:00.000Z,
+    "type": "NoMoreEditsTimelineEvent",
+  },
+  Object {
+    "timestamp": 2017-09-09T17:10:00.000Z,
+    "type": "LeaveForAirportTimelineEvent",
+  },
+  Object {
+    "departure": Object {
+      "authToken": "token-lol",
+      "bid": 2707251,
+      "when": Object {
+        "local": 2017-09-09T21:10:00.000Z,
+        "utc": 2017-09-09T20:10:00.000Z,
+      },
+      "where": Object {
+        "cityId": "london_gb",
+        "cityName": "London",
+        "code": "LGW",
+        "terminal": "E",
+      },
+    },
+    "timestamp": 2017-09-09T19:10:00.000Z,
+    "type": "AirportArrivalTimelineEvent",
+  },
+  Object {
+    "leg": Object {
+      "airlineCode": "VY",
+      "arrival": Object {
+        "authToken": "token-lol",
+        "bid": 2707251,
+        "when": Object {
+          "local": 2017-09-09T23:30:00.000Z,
+          "utc": 2017-09-09T21:30:00.000Z,
+        },
+        "where": Object {
+          "cityId": "paris_fr",
+          "cityName": "Paris",
+          "code": "CDG",
+          "terminal": "2",
+        },
+      },
+      "boardingPassAvailableAt": "2017-09-02",
+      "bookingId": 2707251,
+      "departure": Object {
+        "authToken": "token-lol",
+        "bid": 2707251,
+        "when": Object {
+          "local": 2017-09-09T21:10:00.000Z,
+          "utc": 2017-09-09T20:10:00.000Z,
+        },
+        "where": Object {
+          "cityId": "london_gb",
+          "cityName": "London",
+          "code": "LGW",
+          "terminal": "E",
+        },
+      },
+      "flightNo": 8773,
+      "guarantee": false,
+      "id": "315289498",
+      "isReturn": false,
+      "operatingAirline": Object {
+        "iata": "VY",
+        "name": "Vueling",
+      },
+      "pnr": "chat",
+      "recheckRequired": false,
+      "stopoverDuration": null,
+      "vehicle": Object {
+        "manufacturer": "Airbus",
+        "model": "A320",
+      },
+      "vehicleType": "AIRCRAFT",
+    },
+    "timestamp": 2017-09-09T20:35:00.000Z,
+    "type": "DownloadBoardingPassTimelineEvent",
+  },
+  Object {
+    "terminal": "E",
+    "timestamp": 2017-09-09T20:40:00.000Z,
+    "type": "BoardingTimelineEvent",
+  },
+  Object {
+    "airlineCode": "VY",
+    "arrival": Object {
+      "authToken": "token-lol",
+      "bid": 2707251,
+      "when": Object {
+        "local": 2017-09-09T23:30:00.000Z,
+        "utc": 2017-09-09T21:30:00.000Z,
+      },
+      "where": Object {
+        "cityId": "paris_fr",
+        "cityName": "Paris",
+        "code": "CDG",
+        "terminal": "2",
+      },
+    },
+    "duration": 80,
+    "flightNumber": 8773,
+    "timestamp": 2017-09-09T21:10:00.000Z,
+    "type": "DepartureTimelineEvent",
+  },
+  Object {
+    "arrival": Object {
+      "authToken": "token-lol",
+      "bid": 2707251,
+      "when": Object {
+        "local": 2017-09-09T23:30:00.000Z,
+        "utc": 2017-09-09T21:30:00.000Z,
+      },
+      "where": Object {
+        "cityId": "paris_fr",
+        "cityName": "Paris",
+        "code": "CDG",
+        "terminal": "2",
+      },
+    },
+    "timestamp": 2017-09-09T23:30:00.000Z,
+    "type": "ArrivalTimelineEvent",
+  },
+  Object {
+    "timestamp": 2017-09-09T23:45:00.000Z,
+    "type": "TransportFromAirportTimelineEvent",
+  },
+]
+`;

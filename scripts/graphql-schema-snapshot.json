@@ -5611,6 +5611,18 @@
             "deprecationReason": null
           },
           {
+            "name": "stopoverDuration",
+            "description": "Leg stopover duration before this leg in minutes.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "flightNumber",
             "description": null,
             "args": [],

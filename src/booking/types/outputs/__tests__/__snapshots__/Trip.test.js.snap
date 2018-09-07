@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Trip type should have valid fields 1`] = `
+Object {
+  "arrival": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "arrival",
+    "resolve": [Function],
+    "type": "RouteStop",
+  },
+  "departure": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "departure",
+    "resolve": [Function],
+    "type": "RouteStop",
+  },
+  "duration": Object {
+    "args": Array [],
+    "description": "Trip duration in minutes.",
+    "isDeprecated": false,
+    "name": "duration",
+    "resolve": [Function],
+    "type": "Int",
+  },
+  "legs": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "legs",
+    "resolve": [Function],
+    "type": "[Leg]",
+  },
+}
+`;

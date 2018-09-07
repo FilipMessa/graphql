@@ -1,7 +1,7 @@
 // @flow
 
 import generateDepartureEvent from '../../bookingTimeline/departure';
-import { leg } from '../BookingTimeline.test';
+import { leg } from '../../TestData';
 
 describe('generateDepartureEvent', () => {
   it('returns Departure event if departure.when.local is set', () => {

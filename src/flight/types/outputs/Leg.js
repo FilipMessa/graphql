@@ -69,6 +69,12 @@ export default new GraphQLObjectType({
         FlightDurationInMinutes(departure, arrival),
     },
 
+    stopoverDuration: {
+      type: GraphQLInt,
+      description: 'Leg stopover duration before this leg in minutes.',
+      resolve: ({ stopoverDuration }: Leg): number | null => stopoverDuration,
+    },
+
     flightNumber: {
       type: GraphQLInt,
       resolve: ({ flightNo }: Leg): number => flightNo,

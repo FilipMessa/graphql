@@ -3,7 +3,7 @@
 import { DateTime } from 'luxon';
 
 import generateAirportArrivalEvent from '../../bookingTimeline/airportArrival';
-import { booking } from '../BookingTimeline.test';
+import { booking } from '../../TestData';
 
 describe('generateAirportArrivalEvent', () => {
   it('returns AirportArrival event if departure.when.local is set', () => {

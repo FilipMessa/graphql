@@ -1,7 +1,7 @@
 // @flow
 
 import generateBookedFlightEvent from '../../bookingTimeline/bookedFlight';
-import { booking } from '../BookingTimeline.test';
+import { booking } from '../../TestData';
 
 describe('generateBookedFlightEvent', () => {
   it('returns BookedFlightEvent', () => {

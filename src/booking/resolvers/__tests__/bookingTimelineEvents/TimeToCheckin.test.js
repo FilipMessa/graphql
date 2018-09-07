@@ -1,7 +1,7 @@
 // @flow
 
 import generateTimeToCheckinEvent from '../../bookingTimeline/timeToCheckin';
-import { booking } from '../BookingTimeline.test';
+import { booking } from '../../TestData';
 
 describe('generateTimeToCheckinEvent', () => {
   it('should generate TimeToCheckin event if online checkin is available', () => {

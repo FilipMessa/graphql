@@ -1,7 +1,7 @@
 // @flow
 
 import generateEnterDetailsEvent from '../../bookingTimeline/enterDetails';
-import { booking } from '../BookingTimeline.test';
+import { booking } from '../../TestData';
 
 describe('generateEnterDetailsEvent', () => {
   const dateNow = Date.now;
