@@ -5,6 +5,7 @@ import { DateTime } from 'luxon';
 
 import type { BookingsItem } from '../Booking';
 import type { Leg } from '../../flight/Flight';
+import { CoveredBy } from '../../flight/types/enums/CoveredBy';
 
 export function groupBookings(bookings: $ReadOnlyArray<BookingsItem>) {
   return bookings.reduce(
@@ -54,14 +55,19 @@ export function isPastBooking(singleBooking: BookingsItem) {
   );
 }
 
-export function findUpcomingLeg(legs: Leg[]) {
+export function findUpcomingLeg(
+  legs: Leg[],
+  guarantee: ?$Values<typeof CoveredBy>,
+) {
   return [...legs]
     .filter(leg => {
       const date = idx(leg, _ => _.arrival.when.utc);
-      return date
+      const isFuture = date
         ? DateTime.fromJSDate(date, { zone: 'utc' }).diffNow('milliseconds')
             .milliseconds > 0
         : false;
+
+      return guarantee ? leg.guarantee === guarantee && isFuture : isFuture;
     })
     .sort((legA, legB) => {
       const dateA = idx(legA, _ => _.arrival.when.utc);

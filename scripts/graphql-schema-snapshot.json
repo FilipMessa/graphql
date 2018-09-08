@@ -5091,7 +5091,18 @@
           {
             "name": "upcomingLeg",
             "description": "Nearest upcoming leg by arrival time.",
-            "args": [],
+            "args": [
+              {
+                "name": "guarantee",
+                "description": "Filter out only legs with specified guarantee.",
+                "type": {
+                  "kind": "ENUM",
+                  "name": "CoveredBy",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
             "type": {
               "kind": "OBJECT",
               "name": "Leg",
@@ -8111,7 +8122,18 @@
           {
             "name": "upcomingLeg",
             "description": "Nearest upcoming leg by arrival time.",
-            "args": [],
+            "args": [
+              {
+                "name": "guarantee",
+                "description": "Filter out only legs with specified guarantee.",
+                "type": {
+                  "kind": "ENUM",
+                  "name": "CoveredBy",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
             "type": {
               "kind": "OBJECT",
               "name": "Leg",
@@ -8467,7 +8489,18 @@
           {
             "name": "upcomingLeg",
             "description": "Nearest upcoming leg by arrival time.",
-            "args": [],
+            "args": [
+              {
+                "name": "guarantee",
+                "description": "Filter out only legs with specified guarantee.",
+                "type": {
+                  "kind": "ENUM",
+                  "name": "CoveredBy",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
             "type": {
               "kind": "OBJECT",
               "name": "Leg",
@@ -8927,7 +8960,18 @@
           {
             "name": "upcomingLeg",
             "description": "Nearest upcoming leg by arrival time.",
-            "args": [],
+            "args": [
+              {
+                "name": "guarantee",
+                "description": "Filter out only legs with specified guarantee.",
+                "type": {
+                  "kind": "ENUM",
+                  "name": "CoveredBy",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
             "type": {
               "kind": "OBJECT",
               "name": "Leg",
@@ -9295,7 +9339,18 @@
           {
             "name": "upcomingLeg",
             "description": "Nearest upcoming leg by arrival time.",
-            "args": [],
+            "args": [
+              {
+                "name": "guarantee",
+                "description": "Filter out only legs with specified guarantee.",
+                "type": {
+                  "kind": "ENUM",
+                  "name": "CoveredBy",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
             "type": {
               "kind": "OBJECT",
               "name": "Leg",

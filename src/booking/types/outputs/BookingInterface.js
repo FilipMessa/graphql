@@ -36,6 +36,10 @@ import WhitelabeledServices from './services/WhitelabeledServices';
 import BookingBaggage, { type BookingBaggageData } from './BookingBaggage';
 import Leg from '../../../flight/types/outputs/Leg';
 import type { Leg as LegType } from '../../../flight/Flight';
+import {
+  CoveredBy,
+  GraphQLCoveredBy,
+} from '../../../flight/types/enums/CoveredBy';
 
 export type BookingInterfaceData = BookingsItem;
 
@@ -307,8 +311,16 @@ export const commonFields = {
   upcomingLeg: {
     type: Leg,
     description: 'Nearest upcoming leg by arrival time.',
-    resolve: ({ legs }: BookingInterfaceData): ?LegType =>
-      findUpcomingLeg(legs),
+    args: {
+      guarantee: {
+        type: GraphQLCoveredBy,
+        description: 'Filter out only legs with specified guarantee.',
+      },
+    },
+    resolve: (
+      { legs }: BookingInterfaceData,
+      { guarantee }: { guarantee: ?$Values<typeof CoveredBy> },
+    ): ?LegType => findUpcomingLeg(legs, guarantee),
   },
 };
 

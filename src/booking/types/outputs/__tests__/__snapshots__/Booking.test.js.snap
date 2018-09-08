@@ -229,7 +229,15 @@ Object {
     "type": "[BookingBaggage]",
   },
   "upcomingLeg": Object {
-    "args": Array [],
+    "args": Array [
+      Object {
+        "astNode": undefined,
+        "defaultValue": undefined,
+        "description": "Filter out only legs with specified guarantee.",
+        "name": "guarantee",
+        "type": "CoveredBy",
+      },
+    ],
     "description": "Nearest upcoming leg by arrival time.",
     "isDeprecated": false,
     "name": "upcomingLeg",
