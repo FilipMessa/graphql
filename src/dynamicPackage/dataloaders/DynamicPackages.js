@@ -51,14 +51,14 @@ export default class DynamicPackageDataLoader {
   ): Promise<Array<DynamicPackage[]>> {
     return Promise.all(
       params.map(async searchParameters => {
-        const response = await post(
+        const { Hotels, Flight } = await post(
           'http://packagesmetasearch.api.external.logitravel.com/availability/get/',
           await this.prepareParams(searchParameters),
         );
-
-        return response.Hotels.map(hotel =>
-          this.createPackage(response.Flight, hotel),
-        );
+        if (!Hotels) {
+          throw new Error(`No hotels returned from Logitravel`);
+        }
+        return Hotels.map(hotel => this.createPackage(Flight, hotel));
       }),
     );
   }
@@ -112,7 +112,9 @@ export default class DynamicPackageDataLoader {
   ): {|
     id: string,
     name: string,
-    rating: number,
+    rating: {
+      stars: number,
+    },
     review: { score: number },
     photos: PhotoType[],
     price: number,
