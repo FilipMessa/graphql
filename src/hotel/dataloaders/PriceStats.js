@@ -36,7 +36,6 @@ const PriceStats = async (
       ...prepareRoomsRequestParameters(searchParams.roomsConfiguration),
       order_dir: boundary === 'MAX' ? 'desc' : 'asc',
       order_by: 'price',
-      currency: 'EUR', // current limitation, price filter range works only with EUR
       rows: 1,
       offset: 0,
     },

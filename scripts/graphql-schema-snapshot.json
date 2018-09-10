@@ -4607,11 +4607,35 @@
               "name": "Float",
               "ofType": null
             },
+            "isDeprecated": true,
+            "deprecationReason": "Use \"maxPrice\" field instead."
+          },
+          {
+            "name": "priceMin",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use \"minPrice\" field instead."
+          },
+          {
+            "name": "minPrice",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "priceMin",
+            "name": "maxPrice",
             "description": null,
             "args": [],
             "type": {
