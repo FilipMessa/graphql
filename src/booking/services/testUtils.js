@@ -1,11 +1,6 @@
 // @flow
 
-import { CoveredBy } from '../../flight/types/enums/CoveredBy';
-
-export const createLeg = (
-  milliseconds: number,
-  guarantee: ?$Values<typeof CoveredBy> = 'CARRIER',
-) => ({
+export const createLeg = (milliseconds: number, guarantee: ?boolean) => ({
   arrival: {
     when: {
       utc: new Date(milliseconds),

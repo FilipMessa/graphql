@@ -66,8 +66,7 @@ export function findUpcomingLeg(
         ? DateTime.fromJSDate(date, { zone: 'utc' }).diffNow('milliseconds')
             .milliseconds > 0
         : false;
-
-      return guarantee ? leg.guarantee === guarantee && isFuture : isFuture;
+      return guarantee ? leg.guarantee === true && isFuture : isFuture;
     })
     .sort((legA, legB) => {
       const dateA = idx(legA, _ => _.arrival.when.utc);

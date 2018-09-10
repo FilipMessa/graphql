@@ -24,7 +24,7 @@ describe('BookingInterface.upcomingLeg', () => {
   });
 
   it('should filter out upcoming leg by guarantee', () => {
-    const legs = [createLeg(1010), createLeg(1050, 'KIWICOM')];
+    const legs = [createLeg(1010), createLeg(1050, true)];
     // $FlowExpectedError: full booking not needed for this test
     expect(findUpcomingLeg(legs, 'KIWICOM')).toHaveProperty(
       'arrival.when.utc',
