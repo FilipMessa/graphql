@@ -58,7 +58,11 @@ export default class DynamicPackageDataLoader {
         if (!Hotels) {
           throw new Error(`No hotels returned from Logitravel`);
         }
-        return Hotels.map(hotel => this.createPackage(Flight, hotel));
+        // only show hotels with 3 or more stars
+        // and then shuffle the array
+        return Hotels.filter(h => h.Category >= 3)
+          .sort(() => 0.5 - Math.random())
+          .map(hotel => this.createPackage(Flight, hotel));
       }),
     );
   }
@@ -112,9 +116,7 @@ export default class DynamicPackageDataLoader {
   ): {|
     id: string,
     name: string,
-    rating: {
-      stars: number,
-    },
+    rating: number,
     review: { score: number },
     photos: PhotoType[],
     price: number,
