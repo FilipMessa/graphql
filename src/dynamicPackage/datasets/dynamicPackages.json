@@ -1,0 +1,83 @@
+{
+  "Flight": {
+    "Options":
+      [
+        {
+          "Itinerary": 0,
+          "FareId": 6,
+          "OptionId": 13,
+          "Carrier": "TP",
+          "Segments": [{"MarketingCarrier": "WWW"}]
+        },
+        {
+          "Itinerary": 1,
+          "FareId": 6,
+          "OptionId": 12,
+          "Carrier": "U2",
+          "Segments": [{"MarketingCarrier": "WWW"}]
+        }
+      ]
+  },
+  "Hotels": [
+    {
+      "Code": 1822667,
+      "Name": "Vertice Roomspace Madrid",
+      "Location": {},
+      "Image":
+        "http://cdn.bylogitravel.com/wsimgresize/resize/crop/1042/440/s3-eu-west-1.amazonaws.com/logs3euw1cdn/cloudcontent/fotos/agregadorHotelero/0018/22667/1822667/1.jpg?f=15367582",
+      "Category": 3,
+      "Rating": 8,
+      "Description":
+        "Profitez de la vue qui vous est offerte depuis une terrasse et des nombreux équipements et services qui caractérisent l'établissement, notamment l'accès Wi-Fi à Internet gratuit et un service de concierge.",
+      "Options": [{
+        "Boards": [{"Price": {
+          "Value": 23, "Currency": "EUR"
+        }}]
+      }],
+      "AvailabilityDeepLink":
+        "https://holidays.kiwi.com/de/packagesasyncsp/availabilitymaterial/?productType=FlightHotel&lineOfBusiness=Packages&utm_id=24870&availabilityId=455E5F0C653ADEAABDA1A060FAD4D81C&hashRooms=30A30A10A10A&originAirportCode=TXL&destinationType=CIU&destinationCode=4522&departureDateStr=2018-09-20&returnDateStr=2018-09-30&selectedHotelOption=1822667",
+      "HotelDeepLink":
+        "https://holidays.kiwi.com/de/packagesasyncsp/hotelmaterial/?productType=FlightHotel&lineOfBusiness=Packages&utm_id=24870&availabilityId=455E5F0C653ADEAABDA1A060FAD4D81C&hashRooms=30A30A10A10A&originAirportCode=TXL&destinationType=CIU&destinationCode=4522&departureDateStr=2018-09-20&returnDateStr=2018-09-30&selectedHotelOption=1822667"
+    },
+    {
+      "Code": 935,
+      "Name": "Hotel ILUNION Suites Madrid",
+      "Location": [{}],
+      "Image":
+        "http://cdn.bylogitravel.com/wsimgresize/resize/crop/1042/440/s3-eu-west-1.amazonaws.com/logs3euw1cdn/cloudcontent/fotos/agregadorHotelero/0000/00935/935/1.jpg?f=15173933",
+      "Category": 4,
+      "Rating": 9,
+      "Description":
+        "L'Ilunion Suites Madrid vous accueille à Madrid, dans le quartier de Chamartín. Il est situé à côté de l'autoroute M-30, qui mène à l'aéroport de Barajas et au centre de conventions IFEMA.",
+      "Options": [{
+        "Boards": [{"Price": {
+          "Value": 23, "Currency": "EUR"
+        }}]
+      }],
+      "AvailabilityDeepLink":
+        "https://holidays.kiwi.com/de/packagesasyncsp/availabilitymaterial/?productType=FlightHotel&lineOfBusiness=Packages&utm_id=24870&availabilityId=455E5F0C653ADEAABDA1A060FAD4D81C&hashRooms=30A30A10A10A&originAirportCode=TXL&destinationType=CIU&destinationCode=4522&departureDateStr=2018-09-20&returnDateStr=2018-09-30&selectedHotelOption=935",
+      "HotelDeepLink":
+        "https://holidays.kiwi.com/de/packagesasyncsp/hotelmaterial/?productType=FlightHotel&lineOfBusiness=Packages&utm_id=24870&availabilityId=455E5F0C653ADEAABDA1A060FAD4D81C&hashRooms=30A30A10A10A&originAirportCode=TXL&destinationType=CIU&destinationCode=4522&departureDateStr=2018-09-20&returnDateStr=2018-09-30&selectedHotelOption=935"
+    },
+    {
+      "Code": 125540,
+      "Name": "Apart-Hotel Serrano Recoletos",
+      "Location": [{}],
+      "Image":
+        "http://cdn.bylogitravel.com/wsimgresize/resize/crop/1042/440/s3-eu-west-1.amazonaws.com/logs3euw1cdn/cloudcontent/fotos/agregadorHotelero/0001/25540/125540/1.jpg?f=15359546",
+      "Category": 3,
+      "Rating": 7,
+      "Description":
+        "Situé à côté de la grande rue Paseo Recoletos, l'Apart-hotel Serrano Recoletos propose des appartements fonctionnels, spacieux et indépendants, dans le centre commercial de Madrid.",
+      "Options": [{
+        "Boards": [{"Price": {
+          "Value": 23, "Currency": "EUR"
+        }}]
+      }],
+      "AvailabilityDeepLink":
+        "https://holidays.kiwi.com/de/packagesasyncsp/availabilitymaterial/?productType=FlightHotel&lineOfBusiness=Packages&utm_id=24870&availabilityId=455E5F0C653ADEAABDA1A060FAD4D81C&hashRooms=30A30A10A10A&originAirportCode=TXL&destinationType=CIU&destinationCode=4522&departureDateStr=2018-09-20&returnDateStr=2018-09-30&selectedHotelOption=125540",
+      "HotelDeepLink":
+        "https://holidays.kiwi.com/de/packagesasyncsp/hotelmaterial/?productType=FlightHotel&lineOfBusiness=Packages&utm_id=24870&availabilityId=455E5F0C653ADEAABDA1A060FAD4D81C&hashRooms=30A30A10A10A&originAirportCode=TXL&destinationType=CIU&destinationCode=4522&departureDateStr=2018-09-20&returnDateStr=2018-09-30&selectedHotelOption=125540"
+    }
+  ]
+}

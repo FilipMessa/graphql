@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dynamic packages getting all dynamic packages 1`] = `
+Object {
+  "data": Object {
+    "allDynamicPackages": Object {
+      "edges": Array [
+        Object {
+          "node": Object {
+            "hotel": Object {
+              "id": "aG90ZWw6MTgyMjY2Nw==",
+              "mainPhoto": Object {
+                "highResUrl": "http://cdn.bylogitravel.com/wsimgresize/resize/crop/1042/440/s3-eu-west-1.amazonaws.com/logs3euw1cdn/cloudcontent/fotos/agregadorHotelero/0018/22667/1822667/1.jpg?f=15367582",
+              },
+              "name": "Vertice Roomspace Madrid",
+              "rating": Object {
+                "stars": 3,
+              },
+              "review": Object {
+                "score": 0.8,
+              },
+              "summary": "Profitez de la vue qui vous est offerte depuis une terrasse et des nombreux équipements et services qui caractérisent l'établissement, notamment l'accès Wi-Fi à Internet gratuit et un service de concierge.",
+            },
+            "id": "ZHluYW1pY1BhY2thZ2U6MTgyMjY2Nw==",
+            "price": Object {
+              "amount": 23,
+              "currency": "EUR",
+            },
+            "whitelabelUrl": "https://holidays.kiwi.com/de/packagesasyncsp/availabilitymaterial/?productType=FlightHotel&lineOfBusiness=Packages&utm_id=24870&availabilityId=455E5F0C653ADEAABDA1A060FAD4D81C&hashRooms=30A30A10A10A&originAirportCode=TXL&destinationType=CIU&destinationCode=4522&departureDateStr=2018-09-20&returnDateStr=2018-09-30&selectedHotelOption=1822667",
+          },
+        },
+        Object {
+          "node": Object {
+            "hotel": Object {
+              "id": "aG90ZWw6OTM1",
+              "mainPhoto": Object {
+                "highResUrl": "http://cdn.bylogitravel.com/wsimgresize/resize/crop/1042/440/s3-eu-west-1.amazonaws.com/logs3euw1cdn/cloudcontent/fotos/agregadorHotelero/0000/00935/935/1.jpg?f=15173933",
+              },
+              "name": "Hotel ILUNION Suites Madrid",
+              "rating": Object {
+                "stars": 4,
+              },
+              "review": Object {
+                "score": 0.9,
+              },
+              "summary": "L'Ilunion Suites Madrid vous accueille à Madrid, dans le quartier de Chamartín. Il est situé à côté de l'autoroute M-30, qui mène à l'aéroport de Barajas et au centre de conventions IFEMA.",
+            },
+            "id": "ZHluYW1pY1BhY2thZ2U6OTM1",
+            "price": Object {
+              "amount": 23,
+              "currency": "EUR",
+            },
+            "whitelabelUrl": "https://holidays.kiwi.com/de/packagesasyncsp/availabilitymaterial/?productType=FlightHotel&lineOfBusiness=Packages&utm_id=24870&availabilityId=455E5F0C653ADEAABDA1A060FAD4D81C&hashRooms=30A30A10A10A&originAirportCode=TXL&destinationType=CIU&destinationCode=4522&departureDateStr=2018-09-20&returnDateStr=2018-09-30&selectedHotelOption=935",
+          },
+        },
+        Object {
+          "node": Object {
+            "hotel": Object {
+              "id": "aG90ZWw6MTI1NTQw",
+              "mainPhoto": Object {
+                "highResUrl": "http://cdn.bylogitravel.com/wsimgresize/resize/crop/1042/440/s3-eu-west-1.amazonaws.com/logs3euw1cdn/cloudcontent/fotos/agregadorHotelero/0001/25540/125540/1.jpg?f=15359546",
+              },
+              "name": "Apart-Hotel Serrano Recoletos",
+              "rating": Object {
+                "stars": 3,
+              },
+              "review": Object {
+                "score": 0.7,
+              },
+              "summary": "Situé à côté de la grande rue Paseo Recoletos, l'Apart-hotel Serrano Recoletos propose des appartements fonctionnels, spacieux et indépendants, dans le centre commercial de Madrid.",
+            },
+            "id": "ZHluYW1pY1BhY2thZ2U6MTI1NTQw",
+            "price": Object {
+              "amount": 23,
+              "currency": "EUR",
+            },
+            "whitelabelUrl": "https://holidays.kiwi.com/de/packagesasyncsp/availabilitymaterial/?productType=FlightHotel&lineOfBusiness=Packages&utm_id=24870&availabilityId=455E5F0C653ADEAABDA1A060FAD4D81C&hashRooms=30A30A10A10A&originAirportCode=TXL&destinationType=CIU&destinationCode=4522&departureDateStr=2018-09-20&returnDateStr=2018-09-30&selectedHotelOption=125540",
+          },
+        },
+      ],
+    },
+  },
+}
+`;
