@@ -63,7 +63,9 @@ describe('Dynamic packages', () => {
       }
     }
     `;
-
-    expect(await graphql(resultsQuery)).toMatchSnapshot();
+    const result = await graphql(resultsQuery);
+    const { edges } = result.data.allDynamicPackages;
+    expect(edges).toHaveLength(3);
+    expect(edges[0].node.hotel).toHaveProperty('id');
   });
 });

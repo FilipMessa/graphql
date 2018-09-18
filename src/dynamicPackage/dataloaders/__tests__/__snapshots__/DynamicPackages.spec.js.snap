@@ -1,0 +1,164 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dynamic packages CreateFlight returns valid results 1`] = `
+Object {
+  "airlines": Array [
+    "WWW",
+    "WWW",
+  ],
+}
+`;
+
+exports[`Dynamic packages CreateHotel returns valid results 1`] = `
+Array [
+  Object {
+    "currencyCode": "EUR",
+    "id": "1822667",
+    "name": "Vertice Roomspace Madrid",
+    "photos": Array [
+      Object {
+        "highResolution": "http://cdn.bylogitravel.com/wsimgresize/resize/crop/1042/440/s3-eu-west-1.amazonaws.com/logs3euw1cdn/cloudcontent/fotos/agregadorHotelero/0018/22667/1822667/1.jpg?f=15367582",
+        "id": "mainPhoto1822667",
+        "lowResolution": "http://cdn.bylogitravel.com/wsimgresize/resize/crop/1042/440/s3-eu-west-1.amazonaws.com/logs3euw1cdn/cloudcontent/fotos/agregadorHotelero/0018/22667/1822667/1.jpg?f=15367582",
+        "thumbnail": "http://cdn.bylogitravel.com/wsimgresize/resize/crop/1042/440/s3-eu-west-1.amazonaws.com/logs3euw1cdn/cloudcontent/fotos/agregadorHotelero/0018/22667/1822667/1.jpg?f=15367582",
+      },
+    ],
+    "price": 23,
+    "rating": 3,
+    "review": Object {
+      "score": 0.8,
+    },
+    "summary": "Profitez de la vue qui vous est offerte depuis une terrasse et des nombreux équipements et services qui caractérisent l'établissement, notamment l'accès Wi-Fi à Internet gratuit et un service de concierge.",
+  },
+  Object {
+    "currencyCode": "EUR",
+    "id": "935",
+    "name": "Hotel ILUNION Suites Madrid",
+    "photos": Array [
+      Object {
+        "highResolution": "http://cdn.bylogitravel.com/wsimgresize/resize/crop/1042/440/s3-eu-west-1.amazonaws.com/logs3euw1cdn/cloudcontent/fotos/agregadorHotelero/0000/00935/935/1.jpg?f=15173933",
+        "id": "mainPhoto935",
+        "lowResolution": "http://cdn.bylogitravel.com/wsimgresize/resize/crop/1042/440/s3-eu-west-1.amazonaws.com/logs3euw1cdn/cloudcontent/fotos/agregadorHotelero/0000/00935/935/1.jpg?f=15173933",
+        "thumbnail": "http://cdn.bylogitravel.com/wsimgresize/resize/crop/1042/440/s3-eu-west-1.amazonaws.com/logs3euw1cdn/cloudcontent/fotos/agregadorHotelero/0000/00935/935/1.jpg?f=15173933",
+      },
+    ],
+    "price": 23,
+    "rating": 4,
+    "review": Object {
+      "score": 0.9,
+    },
+    "summary": "L'Ilunion Suites Madrid vous accueille à Madrid, dans le quartier de Chamartín. Il est situé à côté de l'autoroute M-30, qui mène à l'aéroport de Barajas et au centre de conventions IFEMA.",
+  },
+  Object {
+    "currencyCode": "EUR",
+    "id": "125540",
+    "name": "Apart-Hotel Serrano Recoletos",
+    "photos": Array [
+      Object {
+        "highResolution": "http://cdn.bylogitravel.com/wsimgresize/resize/crop/1042/440/s3-eu-west-1.amazonaws.com/logs3euw1cdn/cloudcontent/fotos/agregadorHotelero/0001/25540/125540/1.jpg?f=15359546",
+        "id": "mainPhoto125540",
+        "lowResolution": "http://cdn.bylogitravel.com/wsimgresize/resize/crop/1042/440/s3-eu-west-1.amazonaws.com/logs3euw1cdn/cloudcontent/fotos/agregadorHotelero/0001/25540/125540/1.jpg?f=15359546",
+        "thumbnail": "http://cdn.bylogitravel.com/wsimgresize/resize/crop/1042/440/s3-eu-west-1.amazonaws.com/logs3euw1cdn/cloudcontent/fotos/agregadorHotelero/0001/25540/125540/1.jpg?f=15359546",
+      },
+    ],
+    "price": 23,
+    "rating": 3,
+    "review": Object {
+      "score": 0.7,
+    },
+    "summary": "Situé à côté de la grande rue Paseo Recoletos, l'Apart-hotel Serrano Recoletos propose des appartements fonctionnels, spacieux et indépendants, dans le centre commercial de Madrid.",
+  },
+]
+`;
+
+exports[`Dynamic packages CreatePackage returns valid packages 1`] = `
+Array [
+  Object {
+    "flight": Object {
+      "airlines": Array [
+        "WWW",
+        "WWW",
+      ],
+    },
+    "hotel": Object {
+      "currencyCode": "EUR",
+      "id": "1822667",
+      "name": "Vertice Roomspace Madrid",
+      "photos": Array [
+        Object {
+          "highResolution": "http://cdn.bylogitravel.com/wsimgresize/resize/crop/1042/440/s3-eu-west-1.amazonaws.com/logs3euw1cdn/cloudcontent/fotos/agregadorHotelero/0018/22667/1822667/1.jpg?f=15367582",
+          "id": "mainPhoto1822667",
+          "lowResolution": "http://cdn.bylogitravel.com/wsimgresize/resize/crop/1042/440/s3-eu-west-1.amazonaws.com/logs3euw1cdn/cloudcontent/fotos/agregadorHotelero/0018/22667/1822667/1.jpg?f=15367582",
+          "thumbnail": "http://cdn.bylogitravel.com/wsimgresize/resize/crop/1042/440/s3-eu-west-1.amazonaws.com/logs3euw1cdn/cloudcontent/fotos/agregadorHotelero/0018/22667/1822667/1.jpg?f=15367582",
+        },
+      ],
+      "price": 23,
+      "rating": 3,
+      "review": Object {
+        "score": 0.8,
+      },
+      "summary": "Profitez de la vue qui vous est offerte depuis une terrasse et des nombreux équipements et services qui caractérisent l'établissement, notamment l'accès Wi-Fi à Internet gratuit et un service de concierge.",
+    },
+    "id": "1822667",
+    "whitelabelUrl": "https://holidays.kiwi.com/de/packagesasyncsp/availabilitymaterial/?productType=FlightHotel&lineOfBusiness=Packages&utm_id=24870&availabilityId=455E5F0C653ADEAABDA1A060FAD4D81C&hashRooms=30A30A10A10A&originAirportCode=TXL&destinationType=CIU&destinationCode=4522&departureDateStr=2018-09-20&returnDateStr=2018-09-30&selectedHotelOption=1822667",
+  },
+  Object {
+    "flight": Object {
+      "airlines": Array [
+        "WWW",
+        "WWW",
+      ],
+    },
+    "hotel": Object {
+      "currencyCode": "EUR",
+      "id": "935",
+      "name": "Hotel ILUNION Suites Madrid",
+      "photos": Array [
+        Object {
+          "highResolution": "http://cdn.bylogitravel.com/wsimgresize/resize/crop/1042/440/s3-eu-west-1.amazonaws.com/logs3euw1cdn/cloudcontent/fotos/agregadorHotelero/0000/00935/935/1.jpg?f=15173933",
+          "id": "mainPhoto935",
+          "lowResolution": "http://cdn.bylogitravel.com/wsimgresize/resize/crop/1042/440/s3-eu-west-1.amazonaws.com/logs3euw1cdn/cloudcontent/fotos/agregadorHotelero/0000/00935/935/1.jpg?f=15173933",
+          "thumbnail": "http://cdn.bylogitravel.com/wsimgresize/resize/crop/1042/440/s3-eu-west-1.amazonaws.com/logs3euw1cdn/cloudcontent/fotos/agregadorHotelero/0000/00935/935/1.jpg?f=15173933",
+        },
+      ],
+      "price": 23,
+      "rating": 4,
+      "review": Object {
+        "score": 0.9,
+      },
+      "summary": "L'Ilunion Suites Madrid vous accueille à Madrid, dans le quartier de Chamartín. Il est situé à côté de l'autoroute M-30, qui mène à l'aéroport de Barajas et au centre de conventions IFEMA.",
+    },
+    "id": "935",
+    "whitelabelUrl": "https://holidays.kiwi.com/de/packagesasyncsp/availabilitymaterial/?productType=FlightHotel&lineOfBusiness=Packages&utm_id=24870&availabilityId=455E5F0C653ADEAABDA1A060FAD4D81C&hashRooms=30A30A10A10A&originAirportCode=TXL&destinationType=CIU&destinationCode=4522&departureDateStr=2018-09-20&returnDateStr=2018-09-30&selectedHotelOption=935",
+  },
+  Object {
+    "flight": Object {
+      "airlines": Array [
+        "WWW",
+        "WWW",
+      ],
+    },
+    "hotel": Object {
+      "currencyCode": "EUR",
+      "id": "125540",
+      "name": "Apart-Hotel Serrano Recoletos",
+      "photos": Array [
+        Object {
+          "highResolution": "http://cdn.bylogitravel.com/wsimgresize/resize/crop/1042/440/s3-eu-west-1.amazonaws.com/logs3euw1cdn/cloudcontent/fotos/agregadorHotelero/0001/25540/125540/1.jpg?f=15359546",
+          "id": "mainPhoto125540",
+          "lowResolution": "http://cdn.bylogitravel.com/wsimgresize/resize/crop/1042/440/s3-eu-west-1.amazonaws.com/logs3euw1cdn/cloudcontent/fotos/agregadorHotelero/0001/25540/125540/1.jpg?f=15359546",
+          "thumbnail": "http://cdn.bylogitravel.com/wsimgresize/resize/crop/1042/440/s3-eu-west-1.amazonaws.com/logs3euw1cdn/cloudcontent/fotos/agregadorHotelero/0001/25540/125540/1.jpg?f=15359546",
+        },
+      ],
+      "price": 23,
+      "rating": 3,
+      "review": Object {
+        "score": 0.7,
+      },
+      "summary": "Situé à côté de la grande rue Paseo Recoletos, l'Apart-hotel Serrano Recoletos propose des appartements fonctionnels, spacieux et indépendants, dans le centre commercial de Madrid.",
+    },
+    "id": "125540",
+    "whitelabelUrl": "https://holidays.kiwi.com/de/packagesasyncsp/availabilitymaterial/?productType=FlightHotel&lineOfBusiness=Packages&utm_id=24870&availabilityId=455E5F0C653ADEAABDA1A060FAD4D81C&hashRooms=30A30A10A10A&originAirportCode=TXL&destinationType=CIU&destinationCode=4522&departureDateStr=2018-09-20&returnDateStr=2018-09-30&selectedHotelOption=125540",
+  },
+]
+`;
