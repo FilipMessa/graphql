@@ -28,7 +28,7 @@ export default {
   resolve: async (
     _: mixed,
     { id, vote }: Object,
-    { dataLoader, locale }: GraphqlContextType,
+    { dataLoader, locale, whoIAm }: GraphqlContextType,
   ): Promise<FAQArticleType> => {
     const numericVote = vote.toString() === 'up' ? 1 : -1;
     const payload = {
@@ -52,7 +52,9 @@ export default {
     const voteUrl = `https://api.skypicker.com/knowledgebase/api/v1/articles/${originalId}/vote`;
     const header = {
       'Accept-Language': language,
+      'X-WHOIAM': whoIAm,
     };
+
     const response = await post(voteUrl, payload, header);
 
     if (response.message !== successfulResponse.message) {

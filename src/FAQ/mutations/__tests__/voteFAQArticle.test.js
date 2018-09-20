@@ -54,4 +54,20 @@ describe('voteFAQArticle mutation', () => {
       }),
     ).toMatchSnapshot();
   });
+
+  it('should provide X-WHOIAM in header', async () => {
+    const HttpRequest = require('../../../common/services/HttpRequest');
+    const spy = jest.spyOn(HttpRequest, 'post');
+
+    RestApiMock.onPost(
+      `https://api.skypicker.com/knowledgebase/api/v1/articles/${goodId}/vote`,
+    ).replyWithData({ message: 'yummy' });
+
+    await graphql(voteMutation, {
+      articleId: globalId,
+      vote: 'up',
+    });
+
+    expect(spy.mock.calls[0][2]['X-WHOIAM']).not.toHaveLength(0);
+  });
 });
