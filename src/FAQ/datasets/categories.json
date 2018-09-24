@@ -376,7 +376,24 @@
         "articles": []
       }
     ],
-    "articles": []
+    "articles": [
+      {
+        "id": 41,
+        "url": "https://api.skypicker.com/knowledgebase/api/v1/articles/41",
+        "title": "Cabin baggage",
+        "perex": "Learn about your hand luggage allowance.",
+        "upvotes": 68,
+        "downvotes": 32
+      },
+      {
+        "id": 43,
+        "url": "https://api.skypicker.com/knowledgebase/api/v1/articles/43",
+        "title": "Checked baggage",
+        "perex": "Checked baggage refers to the items that are transported in the cargo hold of the aircraft.",
+        "upvotes": 51,
+        "downvotes": 49
+      }
+    ]
   },
   {
     "id": 78,

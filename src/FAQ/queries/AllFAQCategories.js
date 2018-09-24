@@ -13,12 +13,13 @@ const { connectionType: FaqCategoriesConnection } = connectionDefinitions({
 
 export default {
   type: FaqCategoriesConnection,
-  description: 'Retrieve list of FAQ categories.',
+  description:
+    'DEPRECATED - use "FAQSection" query instead.' +
+    'Retrieve list of FAQ categories.',
   args: {
     section: {
       type: FAQSection,
-      description:
-        'Fetch only subsection of FAQ based on the current situation of customer.',
+      description: `Fetch only subsection of FAQ based on customer's booking status.`,
     },
     ...connectionArgs,
   },

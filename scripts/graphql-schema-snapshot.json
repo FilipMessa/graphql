@@ -307,11 +307,11 @@
           },
           {
             "name": "allFAQCategories",
-            "description": "Retrieve list of FAQ categories.",
+            "description": "DEPRECATED - use \"FAQSection\" query instead.Retrieve list of FAQ categories.",
             "args": [
               {
                 "name": "section",
-                "description": "Fetch only subsection of FAQ based on the current situation of customer.",
+                "description": "Fetch only subsection of FAQ based on customer's booking status.",
                 "type": {
                   "kind": "ENUM",
                   "name": "FAQSection",
@@ -1006,6 +1006,33 @@
                   "ofType": {
                     "kind": "SCALAR",
                     "name": "ID",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "FAQCategory",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "FAQSection",
+            "description": "Retrieve category by section.",
+            "args": [
+              {
+                "name": "section",
+                "description": "Fetch FAQ category by section according to current customer's booking status.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "ENUM",
+                    "name": "FAQSection",
                     "ofType": null
                   }
                 },

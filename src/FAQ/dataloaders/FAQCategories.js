@@ -142,19 +142,33 @@ export default class FAQCategoriesLoader {
     );
   }
 
-  loadOneById = async (id: string) => {
-    const categoryId = Number(fromGlobalId(id).id);
+  loadOne = async (categoryId: number) => {
     // dataloader needs to be called with value, that's why {}
     const categories = await this.dataLoader.load({});
     const category = findCategory(categories, categoryId);
 
     if (!category) {
-      throw new Error(`No FAQ category found with ID ${id}`);
+      throw new Error(`No FAQ category found with ID ${categoryId}`);
     }
 
     return omitSectionCategories(category);
   };
 
+  loadOneById = (id: string) => {
+    const categoryId = Number(fromGlobalId(id).id);
+
+    return this.loadOne(categoryId);
+  };
+
+  loadOneBySection = async (section: FAQSectionType) => {
+    const categoryId = sectionToCategories[section];
+
+    return this.loadOne(categoryId);
+  };
+
+  /*
+    DEPRECATED - remove all related functions once "allFAQCategories" is gone.
+   */
   loadAllBySection = (section?: FAQSectionType) => {
     return this.dataLoader.load({
       section: section,

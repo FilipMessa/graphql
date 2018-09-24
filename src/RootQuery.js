@@ -18,6 +18,7 @@ import CurrentUser from './identity/queries/CurrentUser';
 import CustomerBookings from './booking/queries/CustomerBookings';
 import FAQArticle from './FAQ/queries/FAQArticle';
 import FAQCategory from './FAQ/queries/FAQCategory';
+import FAQSection from './FAQ/queries/FAQSection';
 import GeoIP from './geoip/queries/geoIP';
 import Hotel from './hotel/queries/Hotel';
 import HotelCities from './hotel/queries/HotelCities';
@@ -54,6 +55,7 @@ export default new GraphQLObjectType({
     customerSupportNumber: CustomerSupportNumber,
     FAQArticle: FAQArticle,
     FAQCategory: FAQCategory,
+    FAQSection: FAQSection,
     geoIP: GeoIP,
     hotel: Hotel,
     hotelCities: HotelCities,

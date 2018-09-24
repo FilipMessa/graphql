@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FAQSection should return single FAQ category by section 1`] = `
+Object {
+  "data": Object {
+    "FAQSection": Object {
+      "FAQs": Array [
+        Object {
+          "id": "RkFRQXJ0aWNsZTo0MQ==",
+          "title": "Cabin baggage",
+        },
+        Object {
+          "id": "RkFRQXJ0aWNsZTo0Mw==",
+          "title": "Checked baggage",
+        },
+      ],
+      "id": "RkFRQ2F0ZWdvcnk6Nzc=",
+      "originalId": 77,
+      "subcategories": Array [
+        Object {
+          "id": "RkFRQ2F0ZWdvcnk6ODg=",
+        },
+        Object {
+          "id": "RkFRQ2F0ZWdvcnk6ODc=",
+        },
+        Object {
+          "id": "RkFRQ2F0ZWdvcnk6ODM=",
+        },
+        Object {
+          "id": "RkFRQ2F0ZWdvcnk6ODQ=",
+        },
+        Object {
+          "id": "RkFRQ2F0ZWdvcnk6ODY=",
+        },
+      ],
+      "title": "After booking",
+    },
+  },
+}
+`;

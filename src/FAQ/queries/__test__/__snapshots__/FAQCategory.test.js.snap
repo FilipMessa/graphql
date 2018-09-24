@@ -48,7 +48,7 @@ Object {
     "FAQCategory": null,
   },
   "errors": Array [
-    [GraphQLError: No FAQ category found with ID RkFRQ2F0ZWdvcnk6NjY2],
+    [GraphQLError: No FAQ category found with ID 666],
   ],
 }
 `;
