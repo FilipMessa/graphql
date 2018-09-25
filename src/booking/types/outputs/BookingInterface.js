@@ -40,6 +40,7 @@ import {
   CoveredBy,
   GraphQLCoveredBy,
 } from '../../../flight/types/enums/CoveredBy';
+import CustomerSupport from './customerSupport';
 
 export type BookingInterfaceData = BookingsItem;
 
@@ -272,6 +273,12 @@ export const commonFields = {
     resolve: (booking: BookingInterfaceData) => ({
       booking,
     }),
+  },
+
+  customerSupport: {
+    type: CustomerSupport,
+    description: 'Support provided by CS for booking.',
+    resolve: (booking: BookingInterfaceData) => ({ booking }),
   },
 
   onlineCheckinIsAvailable: {

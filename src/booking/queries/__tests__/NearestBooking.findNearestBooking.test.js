@@ -1,27 +1,43 @@
 // @flow
 
 import MockDate from 'mockdate';
+import { DateTime } from 'luxon';
 
 import { findNearestBooking } from '../NearestBooking';
 import { createLeg } from '../../services/testUtils';
 
-MockDate.set(1000);
+const now = DateTime.utc().plus({ milliseconds: 1000 });
+MockDate.set(now);
 
 describe('findNearestBooking', () => {
   const bookings = [
     {
-      legs: [createLeg(900), createLeg(1500), createLeg(1600)],
+      legs: [
+        createLeg(now.minus({ milliseconds: 100 })),
+        createLeg(now.plus({ milliseconds: 500 })),
+        createLeg(now.plus({ milliseconds: 600 })),
+      ],
     },
     {
-      legs: [createLeg(1150), createLeg(1200)],
+      legs: [
+        createLeg(now.plus({ milliseconds: 150 })),
+        createLeg(now.plus({ milliseconds: 200 })),
+      ],
     },
   ];
   const pastBookings = [
     {
-      legs: [createLeg(100), createLeg(200), createLeg(900)],
+      legs: [
+        createLeg(now.minus({ milliseconds: 900 })),
+        createLeg(now.minus({ milliseconds: 800 })),
+        createLeg(now.minus({ milliseconds: 100 })),
+      ],
     },
     {
-      legs: [createLeg(500), createLeg(600)],
+      legs: [
+        createLeg(now.minus({ milliseconds: 500 })),
+        createLeg(now.minus({ milliseconds: 400 })),
+      ],
     },
   ];
 

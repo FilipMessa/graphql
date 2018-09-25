@@ -1,9 +1,15 @@
 // @flow
 
-export const createLeg = (milliseconds: number, guarantee: ?boolean) => ({
+export const createLeg = (luxonDate: Object, guarantee: ?boolean) => ({
+  id: Math.random().toString(16),
+  departure: {
+    when: {
+      utc: luxonDate.minus({ hours: 1 }).toJSDate(),
+    },
+  },
   arrival: {
     when: {
-      utc: new Date(milliseconds),
+      utc: luxonDate.toJSDate(),
     },
   },
   guarantee,

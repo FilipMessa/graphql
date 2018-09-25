@@ -78,6 +78,14 @@ Object {
     "resolve": [Function],
     "type": "BookingContactDetails",
   },
+  "customerSupport": Object {
+    "args": Array [],
+    "description": "Support provided by CS for booking.",
+    "isDeprecated": false,
+    "name": "customerSupport",
+    "resolve": [Function],
+    "type": "BookingCustomerSupport",
+  },
   "databaseId": Object {
     "args": Array [],
     "description": "Unique number identifying the booking in communication with support.",
