@@ -2,7 +2,6 @@
 
 import { GraphQLObjectType, GraphQLString, GraphQLFloat } from 'graphql';
 import { connectionArgs, connectionDefinitions } from 'graphql-relay';
-import distance from 'gps-distance';
 import idx from 'idx';
 
 import { globalIdField } from '../../../common/services/OpaqueIdentifier';
@@ -10,20 +9,20 @@ import GraphQLHotelFacility from './HotelFacility';
 import GraphQLHotelRoom from './HotelRoom';
 import GraphQLHotelPhoto from './HotelPhoto';
 import GraphQLHotelRating from './HotelRating';
-import GraphQLHotelReview, { type HotelReviewType } from './HotelReview';
 import GraphQLCoordinates from '../../../location/types/outputs/Coordinates';
-import GraphQLAddress from '../../../common/types/outputs/Address';
 import { connectionFromArray } from '../../../common/services/ArrayConnection';
 
 import type { HotelExtendedType } from '../../dataloaders/flow/HotelExtendedType';
 import type { GraphqlContextType } from '../../../common/services/GraphqlContext';
-import type { Address } from '../../../common/types/outputs/Address';
+import hotelCommonFields, { getDistanceFromCenter } from './HotelCommonFields';
 
 export default new GraphQLObjectType({
   name: 'Hotel',
   description: 'General information about the hotel.',
   fields: {
     id: globalIdField('hotel', ({ id }: HotelExtendedType): string => id),
+
+    ...hotelCommonFields,
 
     originalId: {
       description:
@@ -32,12 +31,6 @@ export default new GraphQLObjectType({
         'Use field "id" instead. This field is used only because of compatibility reasons with old APIs.',
       type: GraphQLString,
       resolve: ({ id }: HotelExtendedType): string => id,
-    },
-
-    name: {
-      description: 'Name of the hotel.',
-      type: GraphQLString,
-      resolve: ({ name }: HotelExtendedType) => name,
     },
 
     cityName: {
@@ -84,32 +77,11 @@ export default new GraphQLObjectType({
       },
     },
 
-    address: {
-      type: GraphQLAddress,
-      resolve: ({ address }: HotelExtendedType): Address => {
-        return {
-          street: address.street,
-          city: address.city,
-          zip: address.zip,
-        };
-      },
-    },
-
     rating: {
       // see: https://en.wikipedia.org/wiki/Hotel_rating
       description: 'The star rating of the hotel.',
       type: GraphQLHotelRating,
       resolve: ({ rating }: HotelExtendedType) => rating,
-    },
-
-    review: {
-      description: 'Hotel review from hotel visitors.',
-      type: GraphQLHotelReview,
-      resolve: ({ review }: HotelExtendedType): HotelReviewType => ({
-        score: review.score,
-        count: review.count,
-        description: undefined, // we still do not have data
-      }),
     },
 
     facilities: {
@@ -165,19 +137,14 @@ export default new GraphQLObjectType({
           hotelId: ancestor.id,
           language: idx(ancestor, _ => _.args.language),
         });
-        const city = await dataLoader.city.load(cityId);
-        if (location && city && city.location) {
-          return Math.abs(
-            distance(
-              location.latitude,
-              location.longitude,
-              city.location.latitude,
-              city.location.longitude,
-            ),
-          ).toFixed(3);
-        } else {
-          return null;
-        }
+
+        const distance = await getDistanceFromCenter(
+          { dataLoader },
+          cityId,
+          location,
+        );
+
+        return distance;
       },
     },
   },

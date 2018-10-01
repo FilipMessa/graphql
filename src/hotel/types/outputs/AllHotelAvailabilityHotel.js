@@ -1,21 +1,16 @@
 // @flow
 
-import {
-  GraphQLObjectType,
-  GraphQLString,
-  GraphQLFloat,
-  GraphQLID,
-} from 'graphql';
-import distance from 'gps-distance';
+import { GraphQLObjectType, GraphQLFloat, GraphQLID } from 'graphql';
 import { toGlobalId } from 'graphql-relay';
 
 import { globalIdField } from '../../../common/services/OpaqueIdentifier';
 import GraphQLPrice from '../../../common/types/outputs/Price';
 import GraphQLHotelPhoto from './HotelPhoto';
-import GraphQLHotelReview from './HotelReview';
 import GraphQLHotelRating from './HotelRating';
 import type { HotelType } from '../../dataloaders/flow/HotelType';
 import type { GraphqlContextType } from '../../../common/services/GraphqlContext';
+import GraphQLCoordinates from '../../../location/types/outputs/Coordinates';
+import hotelCommonFields, { getDistanceFromCenter } from './HotelCommonFields';
 
 export default new GraphQLObjectType({
   name: 'AllHotelAvailabilityHotel',
@@ -23,7 +18,7 @@ export default new GraphQLObjectType({
     'Information about hotel availability during selected time period.',
   fields: {
     id: globalIdField(),
-
+    ...hotelCommonFields,
     price: {
       type: GraphQLPrice,
       description:
@@ -32,14 +27,6 @@ export default new GraphQLObjectType({
         amount: price,
         currency: currencyCode,
       }),
-    },
-    name: {
-      type: GraphQLString,
-      resolve: ({ name }) => name,
-    },
-    review: {
-      type: GraphQLHotelReview,
-      resolve: ({ review }) => review,
     },
     rating: {
       type: GraphQLHotelRating,
@@ -68,20 +55,12 @@ export default new GraphQLObjectType({
           location,
         } = await dataLoader.hotel.hotelsAvailabilityExtras.load(parseInt(id));
 
-        const city = await dataLoader.city.load(cityId);
-
-        if (location && city && city.location) {
-          return Math.abs(
-            distance(
-              location.latitude,
-              location.longitude,
-              city.location.latitude,
-              city.location.longitude,
-            ),
-          ).toFixed(3);
-        } else {
-          return null;
-        }
+        const distance = await getDistanceFromCenter(
+          dataLoader,
+          cityId,
+          location,
+        );
+        return distance;
       },
     },
     mainPhoto: {
@@ -103,6 +82,23 @@ export default new GraphQLObjectType({
       type: GraphQLID,
       // When we query for availableHotel it will check that the id is of hotel
       resolve: ({ id }: HotelType): string => toGlobalId('hotel', id),
+    },
+    coordinates: {
+      description: 'Location of the hotel.',
+      type: GraphQLCoordinates,
+      resolve: async (
+        { id }: HotelType,
+        args: Object,
+        { dataLoader }: GraphqlContextType,
+      ) => {
+        const {
+          location,
+        } = await dataLoader.hotel.hotelsAvailabilityExtras.load(parseInt(id));
+        return {
+          lat: location.latitude,
+          lng: location.longitude,
+        };
+      },
     },
   },
 });
