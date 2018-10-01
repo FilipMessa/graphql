@@ -67,6 +67,11 @@ function sanitizeHotels(hotels, searchParameters): HotelType[] {
     whitelabelUrl: hotel.url,
     cityName: hotel.city,
     cityId: hotel.city_id,
+    review: {
+      score: hotel.review_score,
+      description: hotel.review_score_word,
+      count: hotel.review_nr,
+    },
     address: {
       street: hotel.address,
       city: hotel.city,

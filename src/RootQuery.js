@@ -30,12 +30,14 @@ import AirHelpPlusOffer from './bookingAncillaries/queries/AirHelpPlusOffer';
 import SingleBooking from './booking/queries/SingleBooking';
 import AllDocuments from './documents/queries/AllDocuments';
 import CustomerSupportNumber from './customerSupport/queries/CustomerSupportNumber';
+import AllAvailableBookingComHotels from './hotel/queries/AllAvailableBookingComHotels';
 
 export default new GraphQLObjectType({
   name: 'RootQuery',
   description: 'Root Query',
   fields: {
     airHelpPlusOffer: AirHelpPlusOffer,
+    allAvailableBookingComHotels: AllAvailableBookingComHotels,
     allAvailableHotels: AllAvailableHotels,
     allBookings: AllBookings,
     allDocuments: AllDocuments,

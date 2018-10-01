@@ -1,0 +1,212 @@
+{
+  "result": [
+    {
+      "name": "Vizzola Ticino",
+      "city_id": -132691,
+      "country": "it",
+      "translations": [
+        {
+          "language": "en",
+          "name": "Vizzola Ticino"
+        }
+      ],
+      "location": {
+        "latitude": "45.6256",
+        "longitude": "8.69624"
+      },
+      "nr_hotels": 4
+    },
+    {
+      "country": "it",
+      "city_id": -131903,
+      "name": "Varese",
+      "nr_hotels": 68,
+      "location": {
+        "longitude": "8.82391",
+        "latitude": "45.81839"
+      },
+      "translations": [
+        {
+          "name": "Varese",
+          "language": "en"
+        }
+      ]
+    },
+    {
+      "nr_hotels": 21,
+      "location": {
+        "longitude": "9.29525",
+        "latitude": "45.49054"
+      },
+      "translations": [
+        {
+          "language": "en",
+          "name": "Segrate"
+        }
+      ],
+      "city_id": -129392,
+      "country": "it",
+      "name": "Segrate"
+    },
+    {
+      "country": "it",
+      "city_id": -127445,
+      "name": "San Donato Milanese",
+      "nr_hotels": 17,
+      "translations": [
+        {
+          "language": "en",
+          "name": "San Donato Milanese"
+        }
+      ],
+      "location": {
+        "longitude": "9.27165",
+        "latitude": "45.41807"
+      }
+    },
+    {
+      "location": {
+        "longitude": "9.04014",
+        "latitude": "45.53087"
+      },
+      "translations": [
+        {
+          "name": "Rho",
+          "language": "en"
+        }
+      ],
+      "nr_hotels": 94,
+      "name": "Rho",
+      "country": "it",
+      "city_id": -126278
+    },
+    {
+      "name": "Orio al Serio",
+      "city_id": -123406,
+      "country": "it",
+      "translations": [
+        {
+          "language": "en",
+          "name": "Orio al Serio"
+        }
+      ],
+      "location": {
+        "latitude": "45.6749992370605",
+        "longitude": "9.69062995910645"
+      },
+      "nr_hotels": 15
+    },
+    {
+      "country": "it",
+      "city_id": -121726,
+      "name": "Milan",
+      "nr_hotels": 4171,
+      "location": {
+        "latitude": "45.464298248291",
+        "longitude": "9.18877983093262"
+      },
+      "translations": [
+        {
+          "language": "en",
+          "name": "Milan"
+        }
+      ]
+    },
+    {
+      "nr_hotels": 13,
+      "translations": [
+        {
+          "language": "en",
+          "name": "Garbagnate Milanese"
+        }
+      ],
+      "location": {
+        "longitude": "9.08003",
+        "latitude": "45.57715"
+      },
+      "country": "it",
+      "city_id": -118278,
+      "name": "Garbagnate Milanese"
+    },
+    {
+      "name": "Bergamo",
+      "city_id": -111474,
+      "country": "it",
+      "location": {
+        "longitude": "9.66856350889429",
+        "latitude": "45.6943958926871"
+      },
+      "translations": [
+        {
+          "name": "Bergamo",
+          "language": "en"
+        }
+      ],
+      "nr_hotels": 511
+    },
+    {
+      "nr_hotels": 6,
+      "location": {
+        "latitude": "45.52722",
+        "longitude": "9.1176"
+      },
+      "translations": [
+        {
+          "name": "Baranzate",
+          "language": "en"
+        }
+      ],
+      "city_id": -111190,
+      "country": "it",
+      "name": "Baranzate"
+    },
+    {
+      "location": {
+        "longitude": "9.0866003036499",
+        "latitude": "45.5089988708496"
+      },
+      "translations": [
+        {
+          "language": "en",
+          "name": "Pero"
+        }
+      ],
+      "nr_hotels": 47,
+      "name": "Pero",
+      "country": "it",
+      "city_id": 900040489
+    },
+    {
+      "location": {
+        "longitude": "9.72636985778809",
+        "latitude": "45.6581993103027"
+      },
+      "translations": [
+        {
+          "name": "Grassobbio",
+          "language": "en"
+        }
+      ],
+      "nr_hotels": 8,
+      "name": "Grassobbio",
+      "country": "it",
+      "city_id": 900040885
+    },
+    {
+      "nr_hotels": 8,
+      "location": {
+        "latitude": "45.6389007568359",
+        "longitude": "8.70952987670898"
+      },
+      "translations": [
+        {
+          "language": "en",
+          "name": "Case Nuove"
+        }
+      ],
+      "city_id": 900048081,
+      "country": "it",
+      "name": "Case Nuove"
+    }
+  ]
+}

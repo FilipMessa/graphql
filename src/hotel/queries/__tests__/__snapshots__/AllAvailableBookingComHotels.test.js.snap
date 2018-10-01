@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`all hotels query should work for full query 1`] = `
+Object {
+  "data": Object {
+    "allAvailableBookingComHotels": Object {
+      "cityName": null,
+      "edges": Array [
+        Object {
+          "node": Object {
+            "distanceFromCenter": 0.786,
+            "hotelId": "aG90ZWw6MjUyMTU=",
+            "id": "QWxsSG90ZWxBdmFpbGFiaWxpdHlIb3RlbDoyNTIxNQ==",
+            "mainPhoto": Object {
+              "lowResUrl": "https://q-xx.bstatic.com/xdata/images/hotel/max300/154114942.jpg?k=fd6059f3e6e0ae7ac2ad517744ef1c67347619a4c2e3c41b187666a1e91a28de&o=",
+            },
+            "name": "Hotel Abcoude",
+            "price": Object {
+              "amount": 528.71,
+              "currency": "EUR",
+            },
+            "rating": Object {
+              "categoryName": "First Class",
+              "stars": 4,
+            },
+            "review": Object {
+              "count": 759,
+              "description": "Very good",
+              "score": 8,
+            },
+          },
+        },
+        Object {
+          "node": Object {
+            "distanceFromCenter": 1.264,
+            "hotelId": "aG90ZWw6MjQ4NTM5",
+            "id": "QWxsSG90ZWxBdmFpbGFiaWxpdHlIb3RlbDoyNDg1Mzk=",
+            "mainPhoto": Object {
+              "lowResUrl": "https://q-xx.bstatic.com/xdata/images/hotel/max300/112012016.jpg?k=8f8854a431db0bc05d95877eceb16c7ec6359dbff7f25c627317729186a863aa&o=",
+            },
+            "name": "Hotel De Witte Dame",
+            "price": Object {
+              "amount": 775,
+              "currency": "EUR",
+            },
+            "rating": Object {
+              "categoryName": "First Class",
+              "stars": 4,
+            },
+            "review": Object {
+              "count": 424,
+              "description": "Exceptional",
+              "score": 9.6,
+            },
+          },
+        },
+      ],
+      "pageInfo": Object {
+        "endCursor": "YXJyYXljb25uZWN0aW9uOjQ5",
+        "hasNextPage": false,
+        "hasPreviousPage": false,
+        "startCursor": "YXJyYXljb25uZWN0aW9uOjA=",
+      },
+      "stats": Object {
+        "maxPrice": 7,
+        "minPrice": 47,
+      },
+    },
+  },
+}
+`;

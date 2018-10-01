@@ -24,6 +24,7 @@ import OptionsStorage from './context/OptionsStorage';
 import HotelsAvailability from '../../hotel/dataloaders/HotelsAvailability';
 import { type SearchParameters as HotelKey } from '../../hotel/dataloaders/flow/SearchParameters';
 import createHotelByIdLoader from '../../hotel/dataloaders/HotelByID';
+import createHotelsAvailabilityExtras from '../../hotel/dataloaders/HotelsAvailabilityExtras';
 import HotelCities from '../../hotel/dataloaders/HotelCities';
 import CitiesByID from '../../hotel/dataloaders/CitiesByID';
 import HotelRoomsLoader from '../../hotel/dataloaders/HotelRooms';
@@ -39,6 +40,7 @@ import type { Airline } from '../../flight/Flight';
 import type { CurrencyDetail } from '../../currency/CurrencyDetail';
 import type { HotelType } from '../../hotel/dataloaders/flow/HotelType';
 import type { City } from '../../hotel/dataloaders/flow/City';
+import type { HotelsAvailabilityExtrasType } from '../../hotel/dataloaders/flow/HotelsAvailabilityExtras';
 import type { Args as FAQArgs } from '../../FAQ/dataloaders/searchFAQ';
 import type { FAQArticleItem } from '../../FAQ/dataloaders/FAQCategories';
 import type {
@@ -81,6 +83,10 @@ export type GraphqlContextType = {|
       availabilityByLocation: DataLoader<HotelKey, HotelType[]>,
       availabilityByID: DataLoader<HotelKey, HotelType[]>,
       byID: DataLoader<$FlowFixMe, $FlowFixMe>,
+      hotelsAvailabilityExtras: DataLoader<
+        number,
+        HotelsAvailabilityExtrasType,
+      >,
       cities: HotelCities,
       room: HotelRoomsLoader,
       roomAvailability: HotelRoomAvailabilityLoader,
@@ -164,6 +170,9 @@ export function createContext({
         roomAvailability: new HotelRoomAvailabilityLoader(),
         roomBedding: HotelRoomBeddingLoader,
         priceStats: PriceStatsLoader,
+        hotelsAvailabilityExtras: createHotelsAvailabilityExtras(
+          locale.format.underscored,
+        ),
       },
       FAQ: createFAQLoader(locale.language, FAQ_CATEGORY_ID),
       FAQCategories: new FAQCategoriesLoader(locale.language, FAQ_CATEGORY_ID),

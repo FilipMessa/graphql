@@ -13,7 +13,7 @@ import { processInputArguments } from '../services/ParametersFormatter';
 import GraphQLHotelsSearchInput from '../types/inputs/AllAvailableHotelsSearchInput';
 import GraphQLHotelsFilterInput from '../types/inputs/AllAvailableHotelsFilterInput';
 import GraphQLAvailableHotelOptionsInput from '../types/inputs/AvailableHotelOptionsInput';
-import GraphQLHotelAvailability from '../types/outputs/HotelAvailability';
+import GraphQLAllHotelAvailabilityHotel from '../types/outputs/AllHotelAvailabilityHotel';
 import GraphQLHotelAvailabilityStats from '../types/outputs/HotelAvailabilityStats';
 import { connectionFromArray } from '../../common/services/ArrayConnection';
 
@@ -54,7 +54,7 @@ const { connectionType: AllHotelsConnection } = connectionDefinitions({
       },
     },
   },
-  nodeType: GraphQLHotelAvailability,
+  nodeType: GraphQLAllHotelAvailabilityHotel,
 });
 
 export default {
@@ -63,9 +63,6 @@ export default {
     "Search for all available hotels in one location. It's necessary to " +
     'send checkin and checkout dates as well as rooms configuration to ' +
     'get availability info.',
-  deprecationReason: `This query has serious performace issues. That is basically because we are overfeching data
-  from the https://distribution-xml.booking.com/2.0/json/hotels endpoint with way to many extras.
-  Use allAvailableBookingComHotels instead`,
   args: {
     search: {
       type: new GraphQLNonNull(GraphQLHotelsSearchInput),
