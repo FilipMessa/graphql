@@ -8,12 +8,14 @@ import GraphQLAddress from '../../../common/types/outputs/Address';
 import type { Address } from '../../../common/types/outputs/Address';
 import GraphQLHotelReview from './HotelReview';
 
+import type { DataLoaderCity } from '../../../common/services/GraphqlContext';
+
 export const getDistanceFromCenter = async (
-  dataLoader: Object,
+  dataLoader: DataLoaderCity,
   cityId: string,
   location: {| +latitude: string, +longitude: string |},
 ) => {
-  const city = await dataLoader.city.load(cityId);
+  const city = await dataLoader.load(cityId);
 
   if (location && city && city.location) {
     return Math.abs(

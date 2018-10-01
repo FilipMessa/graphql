@@ -139,7 +139,7 @@ export default new GraphQLObjectType({
         });
 
         const distance = await getDistanceFromCenter(
-          dataLoader,
+          dataLoader.city,
           cityId,
           location,
         );

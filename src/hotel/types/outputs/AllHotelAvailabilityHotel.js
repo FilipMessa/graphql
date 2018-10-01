@@ -56,7 +56,7 @@ export default new GraphQLObjectType({
         } = await dataLoader.hotel.hotelsAvailabilityExtras.load(parseInt(id));
 
         const distance = await getDistanceFromCenter(
-          dataLoader,
+          dataLoader.city,
           cityId,
           location,
         );

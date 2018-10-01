@@ -78,7 +78,7 @@ export type GraphqlContextType = {|
     location: LocationLoader,
     locations: LocationsLoader,
     rates: DataLoader<string, ?number>,
-    city: DataLoader<string, City>,
+    city: DataLoaderCity,
     hotel: {
       availabilityByLocation: DataLoader<HotelKey, HotelType[]>,
       availabilityByID: DataLoader<HotelKey, HotelType[]>,
@@ -106,6 +106,8 @@ export type GraphqlContextType = {|
   options: OptionsStorage,
   _traceCollector?: Object,
 |};
+
+export type DataLoaderCity = DataLoader<string, City>;
 
 /**
  * Although API contains several FAQ trees, this is currently the only relevant tree.
