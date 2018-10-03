@@ -17,7 +17,7 @@ export default {
         'You should use "node" query if you want to use opaque ID.',
     },
     authToken: {
-      type: new GraphQLNonNull(GraphQLString),
+      type: GraphQLString,
       description: 'Simple auth token that lets you fetch a unique booking.',
     },
   },
@@ -26,6 +26,10 @@ export default {
     { id, authToken }: Object,
     { dataLoader }: GraphqlContextType,
   ): Promise<BookingInterfaceData> => {
+    if (!authToken) {
+      return dataLoader.booking.load(id);
+    }
+
     return dataLoader.singleBooking.load({ id, authToken });
   },
 };
