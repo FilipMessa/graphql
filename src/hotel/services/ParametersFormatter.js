@@ -16,6 +16,7 @@ export const processInputArguments = (args: Object) => {
     checkin: searchArgs.checkin,
     checkout: searchArgs.checkout,
     currency: options && options.currency,
+    orderBy: idx(options, _ => _.orderBy),
     roomsConfiguration: searchArgs.roomsConfiguration,
     language: searchArgs.language,
     ...(filterArgs && {
@@ -55,6 +56,7 @@ export const processInputArguments = (args: Object) => {
 
 export function prepareRequestParameters(searchParameters: SearchParameters) {
   const parameters = {};
+  parameters.order_by = searchParameters.orderBy || 'popularity';
 
   if (searchParameters.hotelId) {
     // search by hotel ID

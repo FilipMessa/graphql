@@ -45,7 +45,6 @@ async function fetchAllHotels(
         'https://distribution-xml.booking.com/2.0/json/hotelAvailability',
         {
           extras: 'hotel_details',
-          order_by: 'popularity',
           ...parameters,
           ...prepareRoomsRequestParameters(searchParameters.roomsConfiguration),
         },

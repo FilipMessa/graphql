@@ -3,10 +3,19 @@
 import type { HotelFacilities } from './HotelFacilities';
 import type { RoomsConfiguration } from './RoomsConfiguration';
 
+type OrderByEnum =
+  | 'distance'
+  | 'popularity'
+  | 'price'
+  | 'ranking'
+  | 'review_score'
+  | 'stars';
+
 type SharedSearchParameters = {|
   checkin: Date,
   checkout: Date,
   roomsConfiguration: RoomsConfiguration,
+  orderBy: OrderByEnum,
   stars?: number[],
   minPrice?: number,
   maxPrice?: number,

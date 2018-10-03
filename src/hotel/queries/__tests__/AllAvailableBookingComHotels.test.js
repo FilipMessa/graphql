@@ -15,10 +15,10 @@ beforeEach(() => {
     'https://distribution-xml.booking.com/2.0/json/hotelAvailability?extras=hotel_details&order_by=popularity&radius=50&latitude=45.4654&longitude=9.1859&checkin=2017-11-16&checkout=2017-11-23&rows=50&room1=A%2CA%2C4%2C6&room2=A%2C2',
   ).replyWithData(AllHotelsDataset);
   BookingComApiMock.onGet(
-    'https://distribution-xml.booking.com/2.0/json/hotelAvailability?radius=50&latitude=45.4654&longitude=9.1859&checkin=2017-11-16&checkout=2017-11-23&rows=1&room1=A%2CA%2C4%2C6&room2=A%2C2&order_dir=asc&order_by=price&offset=0',
+    'https://distribution-xml.booking.com/2.0/json/hotelAvailability?order_by=price&radius=50&latitude=45.4654&longitude=9.1859&checkin=2017-11-16&checkout=2017-11-23&rows=1&room1=A%2CA%2C4%2C6&room2=A%2C2&order_dir=asc&offset=0',
   ).replyWithData(PriceMaxDataset);
   BookingComApiMock.onGet(
-    'https://distribution-xml.booking.com/2.0/json/hotelAvailability?radius=50&latitude=45.4654&longitude=9.1859&checkin=2017-11-16&checkout=2017-11-23&rows=1&room1=A%2CA%2C4%2C6&room2=A%2C2&order_dir=desc&order_by=price&offset=0',
+    'https://distribution-xml.booking.com/2.0/json/hotelAvailability?order_by=price&radius=50&latitude=45.4654&longitude=9.1859&checkin=2017-11-16&checkout=2017-11-23&rows=1&room1=A%2CA%2C4%2C6&room2=A%2C2&order_dir=desc&offset=0',
   ).replyWithData(PriceMinDataset);
   BookingComApiMock.onGet(
     'https://distribution-xml.booking.com/2.0/json/hotels?extras=hotel_info%2Chotel_photos&hotel_ids=25215%2C248539&language=en-us',
